@@ -1,0 +1,18 @@
+{
+  "name": "risk_profile",
+  "version": "1.0.0",
+  "description": "Risk Profile Questionnaire",
+  "main": "app.js",
+  "scripts": {
+    "risk": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "Risk",
+    "Profile"
+  ],
+  "author": "David Salazar",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  }
+}
