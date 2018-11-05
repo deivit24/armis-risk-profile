@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background: #f6f6f6;
+  background: #fff;
   #sec1 {
     display: flex;
     flex-direction: column;
@@ -12,27 +12,34 @@ body {
     .container {
       text-align: center;
       h1 {
+        font-family: 'Raleway';
         color: white;
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 25px;
       }
       img {
         width: 500px;
       }
-      .row {
-        margin-bottom: 25px;
-        p {
-          color: white;
-          font-size: 20px;
-        }
-        li {
-          font-size: 20px;
-          color: white;
-        }
-      }
+
       p {
+        text-align: left;
+        font-family: 'Raleway';
         color: white;
-        font-size: 25px;
+        font-size: 20px;
+      }
+    }
+
+    #startQuizBtn {
+      background: white;
+      width: 100px;
+      border: black 2px solid;
+      color: black;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        border: #d89e04 2px solid;
+        font-size: 1.2rem;
+        width: 120px;
       }
     }
   }
@@ -45,15 +52,89 @@ body {
   }
 
   .form-contain {
-    background: white;
     padding: 25px 20px;
     margin-top: 50px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1),
-      0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
     transition: transform 0.1s ease-in-out;
-    width: auto;
+    width: 600px;
+    #input-progress {
+      border-bottom: 3px solid #d89e04;
+      width: 0;
+      transition: width 0.6s ease-in-out;
+    }
+
+    #progress-bar {
+      background: lighten(#d89e04, 30%);
+      height: 10px;
+      width: 100%;
+      transition: width 0.5s ease-in-out;
+      margin-bottom: 25px;
+    }
+
+    .question {
+      h2 {
+        font-size: 1.2rem;
+        font-family: 'Raleway';
+        margin-bottom: 15px;
+        background: black;
+        color: white;
+        padding: 15px 10px;
+        border-top-right-radius: 25px;
+        width: 100%;
+      }
+      .contain {
+        position: relative;
+        padding-left: 35px;
+
+        cursor: pointer;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        .checkmark {
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: #eee;
+          border-radius: 50%;
+          position: absolute;
+          &:after {
+            content: '';
+            position: absolute;
+            display: none;
+          }
+        }
+        .checkmark:after {
+          transition: all 0.5s ease-in-out;
+          top: 6px;
+          left: 6px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: white;
+        }
+        &:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          &:checked ~ .checkmark {
+            background-color: #d89e04;
+            &:after {
+              display: block;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -63,7 +144,47 @@ body {
 #loading,
 #answer {
   display: none;
+  text-align: center;
+  img {
+    width: 250px;
+    text-align: center;
+  }
 }
 .redd {
   color: red;
+}
+
+// reset and next question buttons
+#quiz {
+  .row {
+    margin-top: 25px;
+  }
+  #reset {
+    margin-left: 20px;
+    background: white;
+    border: 1px solid black;
+    font-family: 'Raleway';
+    &:hover {
+      background: darken($color: #d89e04, $amount: 10);
+      color: white;
+      border: 1px solid black;
+
+      cursor: pointer;
+    }
+  }
+  #confirm_answer {
+    margin-left: 450px;
+    a {
+      font-size: 2rem;
+      color: #d89e04;
+      &:hover {
+        cursor: pointer;
+        color: darken($color: #d89e04, $amount: 10);
+      }
+    }
+  }
+}
+
+.show {
+  display: block;
 }

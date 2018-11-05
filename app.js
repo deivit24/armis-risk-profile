@@ -1,3 +1,7 @@
+// progress bar
+var inputProgress = document.querySelector('#input-progress');
+
+var progress = document.querySelector('#progress-bar');
 // start button quiz
 
 var currentQuestion = 2;
@@ -6,18 +10,21 @@ function startQuiz() {
   document.getElementById('question-1').className = 'question';
   var startBtn = document.getElementById('startQuizBtn');
   startBtn.parentNode.removeChild(startBtn);
+  inputProgress.style.width = 10 + '%';
 }
 
 // get the number of questions
 function getNumberOfQuestions() {
   //QuerySelectorAll has better browser support in exchange for being slightly slower than gEBCN.
   var totalQuestions = document.querySelectorAll('.question').length;
+
   return totalQuestions;
 }
 
 // next question
 function nextQuestion() {
   hideQuestion(currentQuestion);
+  hideAnswerButton();
 
   showQuestion(currentQuestion);
   currentQuestion++;
@@ -26,11 +33,14 @@ function setAnswerButton() {
   //yes, that's correct. this is my lazy way of input validation without annoyning users
   //(e.g. transition on-click events) on the radio buttons...
   document.getElementById('confirm_answer').className = '';
+  document.getElementById('reset').className = '';
 }
 
 function hideAnswerButton() {
   document.getElementById('confirm_answer').className = 'invisible';
+  document.getElementById('reset').className = 'invisible';
 }
+
 function hideQuestion(id) {
   var totalQuestions = getNumberOfQuestions();
   for (var i = 1; i <= totalQuestions; i++) {
@@ -43,8 +53,11 @@ function showQuestion(id) {
   var totalQuestions = getNumberOfQuestions();
   if (id <= totalQuestions) {
     document.getElementById('question-' + id).className = 'question';
+    inputProgress.style.width = (currentQuestion / totalQuestions) * 100 + '%';
   } else {
     hideAnswerButton(); //begins the end screen process if id is above total question
+    inputProgress.className = 'invisible';
+    progress.className = 'invisible';
   }
 }
 
@@ -81,16 +94,16 @@ function calculateResults() {
         c1score = c1score + 0;
       }
       if (choices[i].value == 'c2') {
-        c2score = c2score + 5;
+        c2score = c2score + 3;
       }
       if (choices[i].value == 'c3') {
-        c3score = c3score + 10;
+        c3score = c3score + 5;
       }
       if (choices[i].value == 'c4') {
-        c4score = c4score + 15;
+        c4score = c4score + 8;
       }
       if (choices[i].value == 'c5') {
-        c5score = c5score + 20;
+        c5score = c5score + 10;
       }
       // If you add more choices and outcomes, you must add another if statement below.
     }
@@ -109,6 +122,7 @@ function calculateResults() {
   if (maxscore > 20) {
     // If user chooses the second choice the most, this outcome will be displayed.
     answerbox.innerHTML = 'You are moderate';
+    document.getElementById('reset').className = 'show';
   }
   if (maxscore >= 60) {
     // If user chooses the third choice the most, this outcome will be displayed.
@@ -130,3 +144,30 @@ function resetAnswer() {
   window.scrollTo(0, 0);
   window.location.reload();
 }
+
+// Scroll Magic Scroll Spy
+
+var controller = new ScrollMagic.Controller();
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: '#startQuizBtn',
+  duration: 500
+}).addTo(controller);
+
+// change behaviour of controller to animate scroll instead of jump
+controller.scrollTo(function(newpos) {
+  TweenMax.to(window, 0.5, { scrollTo: { y: newpos } });
+});
+
+//  bind scroll to anchor links
+$(document).on('click', "[href^='#']", function(e) {
+  var id = $(this).attr('href');
+  if ($(id).length > 0) {
+    e.preventDefault();
+
+    // trigger scroll
+    controller.scrollTo(id);
+
+    // if supported by the browser we can even update the URL.
+  }
+});
