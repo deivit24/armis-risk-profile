@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="dist/css/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
     crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway|Roboto" rel="stylesheet">
 
   <title>Armis Financial | Risk Profile Questionnaire</title>
 </head>
@@ -47,6 +47,7 @@
       <form id="quiz">
 
         <div class="question invisible" id="question-1">
+          <h1>Risk Capacity<span> - Time Horizon</span></h1>
           <!-- Question 1 -->
           <h2>1. What is your current age?</h2>
           <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
@@ -75,6 +76,7 @@
         </div>
 
         <div class="question invisible" id="question-2">
+          <h1>Risk Capacity<span> - Time Horizon</span></h1>
           <!-- Question 2 -->
           <h2>2. Please estimate when you will need to withdraw 20% of your current portfolio value, such as a need for
             a
@@ -102,6 +104,7 @@
           </label><br />
         </div>
         <div class="question invisible" id="question-3">
+          <h1>Risk Capacity<span> - Liquidity</span></h1>
           <!-- Question 3 -->
           <h2>3. If you were to lose your job today, how long will you be able to maintain your current spending life
             style
@@ -129,6 +132,7 @@
           </label><br />
         </div>
         <div class="question invisible" id="question-4">
+          <h1>Risk Capacity<span> - Income</span></h1>
           <!-- Question 4 -->
           <h2>4. What is your total annual income?</h2>
           <!-- Choices for the fourth question -->
@@ -154,6 +158,7 @@
           </label><br />
         </div>
         <div class="question invisible" id="question-5">
+          <h1>Risk Capacity<span> - Reliability</span></h1>
           <!-- Question 5 -->
           <h2>5. Please rate the stability of your income.</h2>
           <!-- Choices for the fourth question -->
@@ -179,6 +184,7 @@
           </label><br />
         </div>
         <div class="question invisible" id="question-6">
+          <h1>Risk Tolerance<span> - Behavior</span></h1>
           <!-- Question 6 -->
           <h2>6. If you unexpectedly received $20,000 to invest today, what would you do? </h2>
           <!-- Choices for the fourth question -->
@@ -205,6 +211,7 @@
           </label><br />
         </div>
         <div class="question invisible" id="question-7">
+          <h1>Risk Tolerance<span> - Perception</span></h1>
           <!-- Question 7 -->
           <h2>7. When you think of the word “risk” in a financial context, which of the following words come to mind?
           </h2>
@@ -231,33 +238,35 @@
           </label><br />
         </div>
         <div class="question invisible" id="question-8">
+          <h1>Risk Tolerance<span> - Short-Term</span></h1>
           <!-- Question 8 -->
-          <h2>8. You managed to accumulate $10,000 of Prize Money in a TV Game Show and you have to choose one of the
-            followings. Which would you take?
+          <h2>8. Which of these statements would best describe your attitudes about the next three years performance of
+            this investment?
           </h2>
           <!-- Choices for the fourth question -->
           <label class="contain"><input type="radio" name="q8" value="c1" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
-            Cash in the $10,000
+            I need to see at least a little return
           </label><br />
           <label class="contain"><input type="radio" name="q8" value="c2" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
-            A 75% chance to win $5,000 more or lose $2,000
+            I’d have a hard time tolerating any losses
           </label><br />
           <label class="contain"><input type="radio" name="q8" value="c3" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
-            A 50% chance to win $10,000 more or lose 5,000
+            I can tolerate a small loss
           </label><br />
           <label class="contain"><input type="radio" name="q8" value="c4" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
-            A 25% chance to win $20,000 or lose $8,000
+            I can tolerate a loss
           </label><br />
           <label class="contain"><input type="radio" name="q8" value="c5" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
-            A 5% chance to win $100,000 or lose all your Prize Money
+            I don’t mind a loss
           </label><br />
         </div>
         <div class="question invisible" id="question-9">
+          <h1>Risk Tolerance<span> - Volatility</span></h1>
           <!-- Question 9 -->
           <h2>9. Throughout the 17-month bear market from 2007 to 2009, due to the 2008 Mortgage Crisis, the S&P 500
             lost 50% of its value. Which of the following would you have done if your portfolio experiences a 50% loss
@@ -286,6 +295,7 @@
           </label><br />
         </div>
         <div class="question invisible" id="question-10">
+          <h1>Risk Capacity<span> - Volatility</span></h1>
           <!-- Question 10 -->
           <h2>10. How emotionally comfortable are you with volatility?
           </h2>
@@ -293,30 +303,30 @@
             1-year dollar gain and the highest 1-year dollar loss. Which portfolio would you choose? </p>
           <img src="img/graph.png" alt="" class="img-fluid">
           <!-- Choices for the ninth question -->
-          <label class="contain"><input type="radio" name="q9" value="c1" required onclick="setAnswerButton()"> <span
+          <label class="contain"><input type="radio" name="q10" value="c1" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
             Portfolio A
           </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c2" required onclick="setAnswerButton()"> <span
+          <label class="contain"><input type="radio" name="q10" value="c2" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
             Portfolio B
           </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c3" required onclick="setAnswerButton()"> <span
+          <label class="contain"><input type="radio" name="q10" value="c3" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
             Portfolio C
           </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c4" required onclick="setAnswerButton()"> <span
+          <label class="contain"><input type="radio" name="q10" value="c4" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
             Portfolio D
           </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c5" required onclick="setAnswerButton()"> <span
+          <label class="contain"><input type="radio" name="q10" value="c5" required onclick="setAnswerButton()"> <span
               class="checkmark"></span>
             Portfolio E
           </label><br />
         </div>
 
         <div class="question invisible" id="question-11">
-          <input type="submit" class="btn btn-dark btn-block" value="Calculate">
+          <input id="calc" type="submit" class="btn btn-dark btn-block" value="Calculate">
         </div>
         <div class="row">
           <div class="col-sx-6 "><button type="reset" id="reset" onclick="resetAnswer()">Reset</button></div>
@@ -336,14 +346,43 @@
       <div id="loading">
         <img src="img/giphy.gif" alt="" class="img-fluid">
       </div>
+
+
       <div id="answer">
-        <p>
-          Your answer
-        </p>
+
       </div>
 
 
 
+    </div>
+    <div class="container-fluid" id="table">
+      <table class="tg">
+        <tr>
+          <th class="tg-1wig">Risk Capacity</th>
+          <td id="rcvc">Very Conservative</td>
+          <td id="rcc">Conservative</td>
+          <td id="rcm">Moderate</td>
+          <td id="rcma">Moderately Aggressive</td>
+          <td id="rca">Agressive</td>
+
+        </tr>
+        <tr>
+          <th class="tg-0lax">Risk Tolerance</th>
+          <td class="tg-0lax">Very Conservative</td>
+          <td class="tg-0lax">Conservative</td>
+          <td class="tg-0lax">Moderate</td>
+          <td class="tg-0lax">Moderately Aggressive</td>
+          <td class="tg-0lax">Agressive</td>
+        </tr>
+        <tr>
+          <th class="tg-0lax">Risk Profile</th>
+          <td class="tg-0lax">Very Conservative</td>
+          <td class="tg-0lax">Conservative</td>
+          <td class="tg-0lax">Moderate</td>
+          <td class="tg-0lax">Moderately Aggressive</td>
+          <td class="tg-0lax">Agressive</td>
+        </tr>
+      </table>
     </div>
   </section>
 

@@ -74,6 +74,21 @@ body {
     }
 
     .question {
+      h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.5rem;
+        background: #d89e04;
+        padding: 10px 10px;
+        margin-bottom: 0px;
+        color: black;
+        width: 50%;
+        border-top-right-radius: 25px;
+
+        span {
+          color: #333;
+          font-size: 1rem;
+        }
+      }
       h2 {
         font-size: 1.2rem;
         font-family: 'Raleway';
@@ -81,7 +96,7 @@ body {
         background: black;
         color: white;
         padding: 15px 10px;
-        border-top-right-radius: 25px;
+
         width: 100%;
       }
       .contain {
@@ -182,6 +197,29 @@ body {
         color: darken($color: #d89e04, $amount: 10);
       }
     }
+  }
+}
+
+#table {
+  text-align: center;
+  .tg {
+    margin: 1em auto;
+    tr {
+      border-bottom: 1px solid #333;
+      padding: 10px 10px;
+      th {
+        padding: 10px 10px;
+        text-align: left;
+      }
+      td {
+        padding: 10px 10px;
+      }
+    }
+  }
+  .chosen {
+    background: lighten(#d89e04, 30);
+    color: black;
+    font-size: 1.2rem;
   }
 }
 

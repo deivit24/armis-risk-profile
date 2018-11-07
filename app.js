@@ -1,3 +1,5 @@
+var inputs = document.getElementsByTagName('input');
+
 // progress bar
 var inputProgress = document.querySelector('#input-progress');
 
@@ -29,6 +31,7 @@ function nextQuestion() {
   showQuestion(currentQuestion);
   currentQuestion++;
 }
+
 function setAnswerButton() {
   //yes, that's correct. this is my lazy way of input validation without annoyning users
   //(e.g. transition on-click events) on the radio buttons...
@@ -117,26 +120,47 @@ function calculateResults() {
   let answerbox = document.getElementById('answer');
   if (maxscore <= 20) {
     // If user chooses the first choice the most, this outcome will be displayed.
-    answerbox.innerHTML = `<span class="redd"><p>You are a Conservative</p></span>`;
+    answerbox.innerHTML = `<p><span class="redd">Very Conservative</span> As a very conservative investor, your portfolio will be invested in the most risk-averse areas such as cash and fixed income securities. This approach offers a high degree of stability and should minimize the chances of substantial short-term volatility. Your main goal is preservation of wealth. The overall return, while not guaranteed, should fall within a narrow range of possibilities. However, particularly for time periods greater than five years, these returns may underperform the returns achievable from a higher-risk approach.</p>`;
+    document.getElementById('reset').className = 'show';
   }
   if (maxscore > 20) {
     // If user chooses the second choice the most, this outcome will be displayed.
-    answerbox.innerHTML = 'You are moderate';
+    answerbox.innerHTML =
+      '<p><span class="redd">Conservative</span> As a conservative investor, your portfolio will be invested primarily in risk-averse areas such as cash and fixed-income securities with only a modest exposure to equities. This approach concentrates on stability rather than maximizing return and should limit the chances of substantial short-term volatility. The overall return, while not guaranteed, should fall within a relatively narrow range of possibilities. However, particularly for time periods greater than five years, these returns may underperform the returns achievable from a higher-risk approach. </p>';
     document.getElementById('reset').className = 'show';
   }
-  if (maxscore >= 60) {
+  if (maxscore > 40) {
     // If user chooses the third choice the most, this outcome will be displayed.
-    answerbox.innerHTML = 'You are a high risk.';
+    answerbox.innerHTML =
+      '<p><span class="redd">Moderate</span>As a moderate investor, your portfolio will include investment in equities, balanced by exposure to more risk-averse areas of the market such as cash, fixed-income securities, and real estate. This approach aims to achieve a balance between stability and return but is likely to involve at least some short-term volatility. The overall return is not guaranteed, although the range of possible outcomes should not be extreme. In most circumstances, particularly for time periods greater than five years, these returns should outperform the returns achievable from a more conservative approach but may underperform the returns achievable from a higher-risk approach.</p>';
+    document.getElementById('reset').className = 'show';
   }
-  if (maxscore >= 80) {
+  if (maxscore > 60) {
     // If user chooses the fourth choice the most, this outcome will be displayed.
-    answerbox.innerHTML = 'You gay';
+    answerbox.innerHTML =
+      '<p><span class="redd">Moderately Aggressive</span>As an moderately aggressive investor, your portfolio will be invested primarily in equities. This approach concentrates on achieving a good overall return on your investment while avoiding the most speculative areas of the market. Significant short-term fluctuations in value can be expected. The eventual return for the time period over which you invest could fall within a relatively wide range of possibilities. In most circumstances, particularly for time periods greater than five years, these returns should outperform the returns achievable from a more conservative approach.</p>';
+    document.getElementById('reset').className = 'show';
+  }
+
+  if (maxscore > 80) {
+    // If user chooses the Fifth choice the most, this outcome will be displayed.
+    answerbox.innerHTML =
+      '<p><span class="redd">Very Aggressive</span>As a very aggressive investor, your portfolio will be invested in equities and will include exposure to more speculative areas of the market. The aim is to maximize return while accepting the possibility of large short-term fluctuations in value and even the possibility of longer-term losses. The eventual return for the time period over which you invest could fall within a wide range of possibilities. In most circumstances, the return should outperform the returns achievable from a more conservative approach.</p>';
+    document.getElementById('reset').className = 'show';
   }
   // If you add more choices, you must add another response below.
 
   document.getElementById('answer').style.display = 'block';
 
   document.getElementById('loading').style.display = 'none';
+
+  document.getElementById('calc').style.display = 'none';
+
+  inputProgress.style.display = 'none';
+  progress.style.display = 'none';
+  document.getElementById('table').classList.remove('invisible');
+
+  caclRiskCapacity();
 }
 
 // program the reset button
@@ -171,3 +195,70 @@ $(document).on('click', "[href^='#']", function(e) {
     // if supported by the browser we can even update the URL.
   }
 });
+
+// table javascript
+
+function caclRiskCapacity() {
+  let rc1score = 0;
+  let rc2score = 0;
+  let rc3score = 0;
+  let rc4score = 0;
+  let rc5score = 0;
+
+  // get a list of the radio inputs on the page
+  let rcchoices = document.getElementsByTagName('input');
+  // loop through all the radio inputs
+  for (i = 0; i <= 25; i++) {
+    // if the radio is checked..
+    if (rcchoices[i].checked) {
+      // add 1 to that choice's score
+      if (rcchoices[i].value == 'c1') {
+        rc1score = rc1score + 0;
+      }
+      if (rcchoices[i].value == 'c2') {
+        rc2score = rc2score + 3;
+      }
+      if (rcchoices[i].value == 'c3') {
+        rc3score = rc3score + 5;
+      }
+      if (rcchoices[i].value == 'c4') {
+        rc4score = rc4score + 8;
+      }
+      if (rcchoices[i].value == 'c5') {
+        rc5score = rc5score + 10;
+      }
+      // If you add more choices and outcomes, you must add another if statement below.
+    }
+  }
+
+  // Find out which choice got the highest score.
+  // If you add more choices and outcomes, you must add the letiable here.
+  let maxrcscore = rc1score + rc2score + rc3score + rc4score + rc5score;
+
+  if (maxrcscore <= 10) {
+    // If user chooses the first choice the most, this outcome will be displayed.
+    let riskCvc = document.getElementById('rcvc');
+    riskCvc.classList = 'chosen';
+  }
+  if (maxrcscore > 10) {
+    // If user chooses the second choice the most, this outcome will be displayed.
+    let riskCc = document.getElementById('rcc');
+    riskCc.classList = 'chosen';
+  }
+  if (maxrcscore > 20) {
+    // If user chooses the third choice the most, this outcome will be displayed.
+    let riskCm = document.getElementById('rcm');
+    riskCm.classList = 'chosen';
+  }
+  if (maxrcscore > 30) {
+    // If user chooses the fourth choice the most, this outcome will be displayed.
+    let riskCma = document.getElementById('rcma');
+    riskCma.classList = 'chosen';
+  }
+
+  if (maxrcscore > 40) {
+    // If user chooses the Fifth choice the most, this outcome will be displayed.
+    let riskCva = document.getElementById('rcva');
+    riskCva.classList = 'chosen';
+  }
+}

@@ -56,6 +56,18 @@ body {
       width: 100%;
       transition: width 0.5s ease-in-out;
       margin-bottom: 25px; }
+    body .form-contain .question h1 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1.5rem;
+      background: #d89e04;
+      padding: 10px 10px;
+      margin-bottom: 0px;
+      color: black;
+      width: 50%;
+      border-top-right-radius: 25px; }
+      body .form-contain .question h1 span {
+        color: #333;
+        font-size: 1rem; }
     body .form-contain .question h2 {
       font-size: 1.2rem;
       font-family: 'Raleway';
@@ -63,7 +75,6 @@ body {
       background: black;
       color: white;
       padding: 15px 10px;
-      border-top-right-radius: 25px;
       width: 100%; }
     body .form-contain .question .contain {
       position: relative;
@@ -143,6 +154,23 @@ body {
     #quiz #confirm_answer a:hover {
       cursor: pointer;
       color: #a67903; }
+
+#table {
+  text-align: center; }
+  #table .tg {
+    margin: 1em auto; }
+    #table .tg tr {
+      border-bottom: 1px solid #333;
+      padding: 10px 10px; }
+      #table .tg tr th {
+        padding: 10px 10px;
+        text-align: left; }
+      #table .tg tr td {
+        padding: 10px 10px; }
+  #table .chosen {
+    background: #fdd878;
+    color: black;
+    font-size: 1.2rem; }
 
 .show {
   display: block; }
