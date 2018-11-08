@@ -160,7 +160,7 @@ function calculateResults() {
   progress.style.display = 'none';
   document.getElementById('table').classList.remove('invisible');
 
-  caclRiskCapacity();
+  caclRiskProfile();
 }
 
 // program the reset button
@@ -198,7 +198,7 @@ $(document).on('click', "[href^='#']", function(e) {
 
 // table javascript
 
-function caclRiskCapacity() {
+function caclRiskProfile() {
   let rc1score = 0;
   let rc2score = 0;
   let rc3score = 0;
@@ -240,17 +240,17 @@ function caclRiskCapacity() {
     let riskCvc = document.getElementById('rcvc');
     riskCvc.classList = 'chosen';
   }
-  if (maxrcscore > 10) {
+  if (maxrcscore > 10 && maxrcscore <= 20) {
     // If user chooses the second choice the most, this outcome will be displayed.
     let riskCc = document.getElementById('rcc');
     riskCc.classList = 'chosen';
   }
-  if (maxrcscore > 20) {
+  if (maxrcscore > 20 && maxrcscore <= 30) {
     // If user chooses the third choice the most, this outcome will be displayed.
     let riskCm = document.getElementById('rcm');
     riskCm.classList = 'chosen';
   }
-  if (maxrcscore > 30) {
+  if (maxrcscore > 30 && maxrcscore <= 40) {
     // If user chooses the fourth choice the most, this outcome will be displayed.
     let riskCma = document.getElementById('rcma');
     riskCma.classList = 'chosen';
@@ -258,7 +258,96 @@ function caclRiskCapacity() {
 
   if (maxrcscore > 40) {
     // If user chooses the Fifth choice the most, this outcome will be displayed.
-    let riskCva = document.getElementById('rcva');
-    riskCva.classList = 'chosen';
+    let riskCa = document.getElementById('rca');
+    riskCa.classList = 'chosen';
+  }
+
+  // time to calculate the risk tolerance of the risk profile!!
+
+  let rt1score = 0;
+  let rt2score = 0;
+  let rt3score = 0;
+  let rt4score = 0;
+  let rt5score = 0;
+
+  // get a list of the radio inputs on the page
+  let rtchoices = document.getElementsByTagName('input');
+  // loop through all the radio inputs
+  for (i = 26; i < rtchoices.length; i++) {
+    // if the radio is checked..
+    if (rtchoices[i].checked) {
+      // add 1 to that choice's score
+      if (rtchoices[i].value == 'c1') {
+        rt1score = rt1score + 0;
+      }
+      if (rtchoices[i].value == 'c2') {
+        rt2score = rt2score + 3;
+      }
+      if (rtchoices[i].value == 'c3') {
+        rt3score = rt3score + 5;
+      }
+      if (rtchoices[i].value == 'c4') {
+        rt4score = rt4score + 8;
+      }
+      if (rtchoices[i].value == 'c5') {
+        rt5score = rt5score + 10;
+      }
+      // If you add more choices and outcomes, you must add another if statement below.
+    }
+  }
+
+  // Find out which choice got the highest score.
+  // If you add more choices and outcomes, you must add the letiable here.
+  let maxrtscore = rt1score + rt2score + rt3score + rt4score + rt5score;
+
+  if (maxrtscore <= 10) {
+    // If user chooses the first choice the most, this outcome will be displayed.
+    let riskTvc = document.getElementById('rtvc');
+    riskTvc.classList = 'chosen';
+  }
+  if (maxrtscore > 10 && maxrtscore <= 20) {
+    // If user chooses the second choice the most, this outcome will be displayed.
+    let riskTc = document.getElementById('rtc');
+    riskTc.classList = 'chosen';
+  }
+  if (maxrtscore > 20 && maxrtscore <= 30) {
+    // If user chooses the third choice the most, this outcome will be displayed.
+    let riskTm = document.getElementById('rtm');
+    riskTm.classList = 'chosen';
+  }
+  if (maxrtscore > 30 && maxrtscore <= 40) {
+    // If user chooses the fourth choice the most, this outcome will be displayed.
+    let riskTma = document.getElementById('rtma');
+    riskTma.classList = 'chosen';
+  }
+
+  if (maxrtscore > 40) {
+    // If user chooses the Fifth choice the most, this outcome will be displayed.
+    let riskTa = document.getElementById('rta');
+    riskTa.classList = 'chosen';
+  }
+
+  let totalScore = maxrcscore + maxrtscore;
+
+  if (totalScore <= 20) {
+    let riskPvc = document.getElementById('rpvc');
+    riskPvc.classList = 'chosen2';
+  }
+
+  if (totalScore > 20 && totalScore <= 40) {
+    let riskPc = document.getElementById('rpc');
+    riskPc.classList = 'chosen2';
+  }
+  if (totalScore > 40 && totalScore <= 60) {
+    let riskPm = document.getElementById('rpm');
+    riskPm.classList = 'chosen2';
+  }
+  if (totalScore > 60 && totalScore <= 80) {
+    let riskPma = document.getElementById('rpma');
+    riskPma.classList = 'chosen2';
+  }
+  if (totalScore > 80) {
+    let riskPa = document.getElementById('rpa');
+    riskPa.classList = 'chosen2';
   }
 }

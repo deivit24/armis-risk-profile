@@ -205,7 +205,6 @@ body {
   .tg {
     margin: 1em auto;
     tr {
-      border-bottom: 1px solid #333;
       padding: 10px 10px;
       th {
         padding: 10px 10px;
@@ -213,6 +212,18 @@ body {
       }
       td {
         padding: 10px 10px;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        width: 220px;
+      }
+      .rch,
+      .rth {
+        background: lighten(#d89e04, 30);
+      }
+      .rph {
+        background: #d89e04;
+        border-bottom: 1px solid #d89e04;
       }
     }
   }
@@ -221,8 +232,17 @@ body {
     color: black;
     font-size: 1.2rem;
   }
+  .chosen2 {
+    background: #d89e04;
+    color: black;
+
+    font-size: 1.2rem;
+    border: 1px solid black;
+  }
 }
 
 .show {
   display: block;
 }
+
+@import 'mobile';

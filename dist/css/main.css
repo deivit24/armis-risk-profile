@@ -160,17 +160,31 @@ body {
   #table .tg {
     margin: 1em auto; }
     #table .tg tr {
-      border-bottom: 1px solid #333;
       padding: 10px 10px; }
       #table .tg tr th {
         padding: 10px 10px;
         text-align: left; }
       #table .tg tr td {
-        padding: 10px 10px; }
+        padding: 10px 10px;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        width: 220px; }
+      #table .tg tr .rch,
+      #table .tg tr .rth {
+        background: #fdd878; }
+      #table .tg tr .rph {
+        background: #d89e04;
+        border-bottom: 1px solid #d89e04; }
   #table .chosen {
     background: #fdd878;
     color: black;
     font-size: 1.2rem; }
+  #table .chosen2 {
+    background: #d89e04;
+    color: black;
+    font-size: 1.2rem;
+    border: 1px solid black; }
 
 .show {
   display: block; }
