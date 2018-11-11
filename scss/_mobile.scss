@@ -39,4 +39,19 @@
 // Smart Phones
 
 @include mediaSm {
+  body {
+    #sec1 {
+      .container {
+        img {
+          width: 250px;
+        }
+        h1 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }
