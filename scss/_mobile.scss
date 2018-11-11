@@ -53,5 +53,117 @@
         }
       }
     }
+
+    .form-contain {
+      padding: 25px 20px;
+      margin-top: 50px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      transition: transform 0.1s ease-in-out;
+      width: 350px;
+      #input-progress {
+        border-bottom: 3px solid #d89e04;
+        width: 0;
+        transition: width 0.6s ease-in-out;
+      }
+
+      #progress-bar {
+        background: lighten(#d89e04, 30%);
+        height: 10px;
+        width: 100%;
+        transition: width 0.5s ease-in-out;
+        margin-bottom: 25px;
+      }
+
+      .question {
+        h1 {
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 1.3rem;
+          background: #d89e04;
+          padding: 10px 10px;
+          margin-bottom: 0px;
+          color: black;
+          width: 100%;
+          border-top-right-radius: 25px;
+
+          span {
+            color: #333;
+            font-size: 1rem;
+          }
+        }
+        h2 {
+          font-size: 1rem;
+          font-family: 'Raleway';
+          margin-bottom: 15px;
+          background: black;
+          color: white;
+          padding: 15px 10px;
+          width: 100%;
+        }
+        .contain {
+          position: relative;
+          padding-left: 35px;
+
+          cursor: pointer;
+
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          .checkmark {
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 50%;
+            position: absolute;
+            &:after {
+              content: '';
+              position: absolute;
+              display: none;
+            }
+          }
+          .checkmark:after {
+            transition: all 0.5s ease-in-out;
+            top: 6px;
+            left: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+          }
+          &:hover input ~ .checkmark {
+            background-color: #ccc;
+          }
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            &:checked ~ .checkmark {
+              background-color: #d89e04;
+              &:after {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #quiz {
+    #confirm_answer {
+      margin-left: 150px;
+      a {
+        font-size: 2rem;
+        color: #d89e04;
+        &:hover {
+          cursor: pointer;
+          color: darken($color: #d89e04, $amount: 10);
+        }
+      }
+    }
   }
 }
