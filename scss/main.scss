@@ -156,6 +156,7 @@ body {
 .invisible {
   display: none;
 }
+
 #loading,
 #answer {
   display: none;
@@ -202,43 +203,138 @@ body {
 
 #table {
   text-align: center;
-  .tg {
-    margin: 1em auto;
-    tr {
+  h2 {
+    font-family: 'Raleway';
+  }
+
+  tr {
+    th {
       padding: 10px 10px;
-      th {
-        padding: 10px 10px;
-        text-align: left;
-      }
-      td {
-        padding: 10px 10px;
-        border-bottom: 1px solid black;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-        width: 220px;
-      }
-      .rch,
-      .rth {
-        background: lighten(#d89e04, 30);
-      }
-      .rph {
-        background: #d89e04;
-        border-bottom: 1px solid #d89e04;
-      }
+      text-align: center;
+      padding: 10px 10px;
+      border: 1px solid black;
+
+      width: 500px;
+      font-family: 'Ubuntu';
+    }
+    .vc {
+      background: lighten(#d89e04, 40);
+    }
+    .c {
+      background: lighten(#d89e04, 35);
+    }
+    .m {
+      background: lighten(#d89e04, 30);
+    }
+    .ma {
+      background: lighten(#d89e04, 25);
+    }
+    .va {
+      background: lighten(#d89e04, 20);
+    }
+
+    .rch,
+    .rth {
+      background: lighten(#d89e04, 30);
+    }
+    .rph {
+      background: #d89e04;
+      border-bottom: 1px solid #d89e04;
     }
   }
-  .chosen {
-    background: lighten(#d89e04, 30);
-    color: black;
-    font-size: 1.2rem;
-  }
-  .chosen2 {
-    background: #d89e04;
-    color: black;
+}
 
-    font-size: 1.2rem;
-    border: 1px solid black;
+// netlify form at the bottom
+
+#risk-capacity,
+#risk-tolerance {
+  background: white;
+  padding: 10px;
+  margin-top: 25px;
+
+  color: black;
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
   }
+  input {
+    width: 0;
+    height: 0;
+  }
+  label {
+    color: black;
+    font-family: 'Ubuntu';
+    padding: 10px;
+    border: 1px solid black;
+    width: 200px;
+    margin: 0%;
+  }
+  .vc {
+    background: lighten(#d89e04, 40);
+  }
+  .c {
+    background: lighten(#d89e04, 35);
+  }
+  .m {
+    background: lighten(#d89e04, 30);
+  }
+  .ma {
+    background: lighten(#d89e04, 25);
+  }
+  .a {
+    background: lighten(#d89e04, 20);
+  }
+}
+
+#risk-profile {
+  background: white;
+  padding: 10px;
+  margin-top: 25px;
+  color: black;
+  h2 {
+    text-align: center;
+  }
+  input {
+    width: 0;
+    height: 0;
+  }
+  label {
+    color: black;
+    font-family: 'Ubuntu';
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid black;
+    width: 250px;
+    margin: 0%;
+  }
+  .vc {
+    background: lighten(#d89e04, 40);
+  }
+  .c {
+    background: lighten(#d89e04, 35);
+  }
+  .m {
+    background: lighten(#d89e04, 30);
+  }
+  .ma {
+    background: lighten(#d89e04, 25);
+  }
+  .a {
+    background: lighten(#d89e04, 20);
+  }
+}
+
+.chosen {
+  background: lighten(#d89e04, 30);
+  color: black;
+  font-size: 1.2rem;
+}
+.chosen2 {
+  background: #d89e04;
+  color: black;
+
+  font-size: 1.2rem;
+  border: 1px solid black;
 }
 
 .show {

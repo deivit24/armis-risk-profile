@@ -157,34 +157,109 @@ body {
 
 #table {
   text-align: center; }
-  #table .tg {
-    margin: 1em auto; }
-    #table .tg tr {
-      padding: 10px 10px; }
-      #table .tg tr th {
-        padding: 10px 10px;
-        text-align: left; }
-      #table .tg tr td {
-        padding: 10px 10px;
-        border-bottom: 1px solid black;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-        width: 220px; }
-      #table .tg tr .rch,
-      #table .tg tr .rth {
-        background: #fdd878; }
-      #table .tg tr .rph {
-        background: #d89e04;
-        border-bottom: 1px solid #d89e04; }
-  #table .chosen {
-    background: #fdd878;
-    color: black;
-    font-size: 1.2rem; }
-  #table .chosen2 {
+  #table h2 {
+    font-family: 'Raleway'; }
+  #table tr th {
+    padding: 10px 10px;
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid black;
+    width: 500px;
+    font-family: 'Ubuntu'; }
+  #table tr .vc {
+    background: #fde7ab; }
+  #table tr .c {
+    background: #fde092; }
+  #table tr .m {
+    background: #fdd878; }
+  #table tr .ma {
+    background: #fcd15f; }
+  #table tr .va {
+    background: #fcca46; }
+  #table tr .rch,
+  #table tr .rth {
+    background: #fdd878; }
+  #table tr .rph {
     background: #d89e04;
+    border-bottom: 1px solid #d89e04; }
+
+#risk-capacity,
+#risk-tolerance {
+  background: white;
+  padding: 10px;
+  margin-top: 25px;
+  color: black; }
+  #risk-capacity h2,
+  #risk-tolerance h2 {
+    text-align: center;
+    font-size: 1.5rem; }
+  #risk-capacity input,
+  #risk-tolerance input {
+    width: 0;
+    height: 0; }
+  #risk-capacity label,
+  #risk-tolerance label {
     color: black;
-    font-size: 1.2rem;
-    border: 1px solid black; }
+    font-family: 'Ubuntu';
+    padding: 10px;
+    border: 1px solid black;
+    width: 200px;
+    margin: 0%; }
+  #risk-capacity .vc,
+  #risk-tolerance .vc {
+    background: #fde7ab; }
+  #risk-capacity .c,
+  #risk-tolerance .c {
+    background: #fde092; }
+  #risk-capacity .m,
+  #risk-tolerance .m {
+    background: #fdd878; }
+  #risk-capacity .ma,
+  #risk-tolerance .ma {
+    background: #fcd15f; }
+  #risk-capacity .a,
+  #risk-tolerance .a {
+    background: #fcca46; }
+
+#risk-profile {
+  background: white;
+  padding: 10px;
+  margin-top: 25px;
+  color: black; }
+  #risk-profile h2 {
+    text-align: center; }
+  #risk-profile input {
+    width: 0;
+    height: 0; }
+  #risk-profile label {
+    color: black;
+    font-family: 'Ubuntu';
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid black;
+    width: 250px;
+    margin: 0%; }
+  #risk-profile .vc {
+    background: #fde7ab; }
+  #risk-profile .c {
+    background: #fde092; }
+  #risk-profile .m {
+    background: #fdd878; }
+  #risk-profile .ma {
+    background: #fcd15f; }
+  #risk-profile .a {
+    background: #fcca46; }
+
+.chosen {
+  background: #fdd878;
+  color: black;
+  font-size: 1.2rem; }
+
+.chosen2 {
+  background: #d89e04;
+  color: black;
+  font-size: 1.2rem;
+  border: 1px solid black; }
 
 .show {
   display: block; }

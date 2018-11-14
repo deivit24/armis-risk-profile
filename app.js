@@ -13,6 +13,13 @@ function startQuiz() {
   var startBtn = document.getElementById('startQuizBtn');
   startBtn.parentNode.removeChild(startBtn);
   inputProgress.style.width = 10 + '%';
+  setTimeout(deleteSecOne, 1000);
+}
+
+// delete section 1
+function deleteSecOne() {
+  var secOne = document.getElementById('sec1');
+  secOne.parentNode.removeChild(secOne);
 }
 
 // get the number of questions
@@ -120,7 +127,7 @@ function calculateResults() {
   let answerbox = document.getElementById('answer');
   if (maxscore <= 20) {
     // If user chooses the first choice the most, this outcome will be displayed.
-    answerbox.innerHTML = `<p><span class="redd">Very Conservative</span> As a very conservative investor, your portfolio will be invested in the most risk-averse areas such as cash and fixed income securities. This approach offers a high degree of stability and should minimize the chances of substantial short-term volatility. Your main goal is preservation of wealth. The overall return, while not guaranteed, should fall within a narrow range of possibilities. However, particularly for time periods greater than five years, these returns may underperform the returns achievable from a higher-risk approach.</p>`;
+    // answerbox.innerHTML = `<p><span class="redd">Very Conservative</span> As a very conservative investor, your portfolio will be invested in the most risk-averse areas such as cash and fixed income securities. This approach offers a high degree of stability and should minimize the chances of substantial short-term volatility. Your main goal is preservation of wealth. The overall return, while not guaranteed, should fall within a narrow range of possibilities. However, particularly for time periods greater than five years, these returns may underperform the returns achievable from a higher-risk approach.</p>`;
     document.getElementById('reset').className = 'show';
   }
   if (maxscore > 20) {
@@ -237,29 +244,74 @@ function caclRiskProfile() {
 
   if (maxrcscore <= 10) {
     // If user chooses the first choice the most, this outcome will be displayed.
-    let riskCvc = document.getElementById('rcvc');
-    riskCvc.classList = 'chosen';
+    let riskCvc = document.getElementById('risk-capacity');
+    riskCvc.innerHTML = `
+    <h2> Your Risk Capacity</h2>
+    <label for="risk-capacity" class="vc">
+    <input
+              type="radio"
+              name="risk-capacity"
+              value="very Conservative"
+              checked
+            /> Very Conservative</label>
+    `;
   }
   if (maxrcscore > 10 && maxrcscore <= 20) {
     // If user chooses the second choice the most, this outcome will be displayed.
-    let riskCc = document.getElementById('rcc');
-    riskCc.classList = 'chosen';
+    let riskCc = document.getElementById('risk-capacity');
+    riskCc.innerHTML = `
+    <h2> Your Risk Capacity</h2>
+    <label for="risk-capacity" class="c">
+    <input
+              type="radio"
+              name="risk-capacity"
+              value="Conservative"
+              checked
+            /> Conservative</label>
+    `;
   }
   if (maxrcscore > 20 && maxrcscore <= 30) {
     // If user chooses the third choice the most, this outcome will be displayed.
-    let riskCm = document.getElementById('rcm');
-    riskCm.classList = 'chosen';
+    let riskCm = document.getElementById('risk-capacity');
+    riskCm.innerHTML = `
+    <h2> Your Risk Capacity</h2>
+    <label for="risk-capacity" class="m">
+    <input
+              type="radio"
+              name="risk-capacity"
+              value="Moderate"
+              checked
+            /> Moderate</label>
+    `;
   }
   if (maxrcscore > 30 && maxrcscore <= 40) {
     // If user chooses the fourth choice the most, this outcome will be displayed.
-    let riskCma = document.getElementById('rcma');
-    riskCma.classList = 'chosen';
+    let riskCma = document.getElementById('risk-capacity');
+    riskCma.innerHTML = `
+    <h2> Your Risk Capacity</h2>
+    <label for="risk-capacity" class="ma">
+    <input
+              type="radio"
+              name="risk-capacity"
+              value="Moderately Aggressive"
+              checked
+            /> Moderately Aggressive</label>
+    `;
   }
 
   if (maxrcscore > 40) {
     // If user chooses the Fifth choice the most, this outcome will be displayed.
-    let riskCa = document.getElementById('rca');
-    riskCa.classList = 'chosen';
+    let riskCa = document.getElementById('risk-capacity');
+    riskCa.innerHTML = `
+    <h2> Your Risk Capacity</h2>
+    <label for="risk-capacity" class="a">
+    <input
+              type="radio"
+              name="risk-capacity"
+              value="Very Aggressive"
+              checked
+            />Very Aggressive</label>
+    `;
   }
 
   // time to calculate the risk tolerance of the risk profile!!
@@ -302,52 +354,142 @@ function caclRiskProfile() {
 
   if (maxrtscore <= 10) {
     // If user chooses the first choice the most, this outcome will be displayed.
-    let riskTvc = document.getElementById('rtvc');
-    riskTvc.classList = 'chosen';
+    let riskTvc = document.getElementById('risk-tolerance');
+    riskTvc.innerHTML = `
+    <h2>Your Risk Tolerance</h2>
+    <label for="risk-tolerance" class="vc">
+    <input
+              type="radio"
+              name="risk-tolerance"
+              value="very Conservative"
+              checked
+            /> Very Conservative</label>
+    `;
   }
   if (maxrtscore > 10 && maxrtscore <= 20) {
     // If user chooses the second choice the most, this outcome will be displayed.
-    let riskTc = document.getElementById('rtc');
-    riskTc.classList = 'chosen';
+    let riskTc = document.getElementById('risk-tolerance');
+    riskTc.innerHTML = `
+    <h2>Your Risk Tolerance</h2>
+    <label for="risk-tolerance" class="c">
+    <input
+              type="radio"
+              name="risk-tolerance"
+              value="Conservative"
+              checked
+            />Conservative</label>
+    `;
   }
   if (maxrtscore > 20 && maxrtscore <= 30) {
     // If user chooses the third choice the most, this outcome will be displayed.
-    let riskTm = document.getElementById('rtm');
-    riskTm.classList = 'chosen';
+    let riskTm = document.getElementById('risk-tolerance');
+    riskTm.innerHTML = `
+    <h2>Your Risk Tolerance</h2>
+    <label for="risk-tolerance" class="m">
+    <input
+              type="radio"
+              name="risk-tolerance"
+              value="Moderate"
+              checked
+            />Moderate</label>
+    `;
   }
   if (maxrtscore > 30 && maxrtscore <= 40) {
     // If user chooses the fourth choice the most, this outcome will be displayed.
-    let riskTma = document.getElementById('rtma');
-    riskTma.classList = 'chosen';
+    let riskTma = document.getElementById('risk-tolerance');
+    riskTma.innerHTML = `
+    <h2>Your Risk Tolerance</h2>
+    <label for="risk-tolerance" class="ma">
+    <input
+              type="radio"
+              name="risk-tolerance"
+              value="Moderately Aggressive"
+              checked
+            />Moderately Aggressive</label>
+    `;
   }
 
   if (maxrtscore > 40) {
     // If user chooses the Fifth choice the most, this outcome will be displayed.
-    let riskTa = document.getElementById('rta');
-    riskTa.classList = 'chosen';
+    let riskTa = document.getElementById('risk-tolerance');
+    riskTa.innerHTML = `
+    <h2>Your Risk Tolerance</h2>
+    <label for="risk-tolerance" class="a">
+    <input
+              type="radio"
+              name="risk-tolerance"
+              value="Very Aggressive"
+              checked
+            />Very Aggressive</label>
+    `;
   }
 
   let totalScore = maxrcscore + maxrtscore;
 
   if (totalScore <= 20) {
-    let riskPvc = document.getElementById('rpvc');
-    riskPvc.classList = 'chosen2';
+    let riskPvc = document.getElementById('risk-profile');
+    riskPvc.innerHTML = `
+    <h2>Your Risk Profile</h2>
+    <label for="risk-profile" class="ma">
+    <input
+              type="radio"
+              name="risk-profile"
+              value="Very Conservative"
+              checked
+            />Very Conservative</label>
+    `;
   }
 
   if (totalScore > 20 && totalScore <= 40) {
-    let riskPc = document.getElementById('rpc');
-    riskPc.classList = 'chosen2';
+    let riskPc = document.getElementById('risk-profile');
+    riskPc.innerHTML = `
+    <h2>Your Risk Profile</h2>
+    <label for="risk-profile" class="c">
+    <input
+              type="radio"
+              name="risk-profile"
+              value="Conservative"
+              checked
+            />Conservative</label>
+    `;
   }
   if (totalScore > 40 && totalScore <= 60) {
-    let riskPm = document.getElementById('rpm');
-    riskPm.classList = 'chosen2';
+    let riskPm = document.getElementById('risk-profile');
+    riskPm.innerHTML = `
+    <h2>Your Risk Profile</h2>
+    <label for="risk-profile" class="m">
+    <input
+              type="radio"
+              name="risk-profile"
+              value="Moderate"
+              checked
+            />Moderate</label>
+    `;
   }
   if (totalScore > 60 && totalScore <= 80) {
-    let riskPma = document.getElementById('rpma');
-    riskPma.classList = 'chosen2';
+    let riskPma = document.getElementById('risk-profile');
+    riskPma.innerHTML = `
+    <h2>Your Risk Profile</h2>
+    <label for="risk-profile" class="ma">
+    <input
+              type="radio"
+              name="risk-profile"
+              value="Moderately Aggressive"
+              checked
+            />Moderately Aggressive</label>
+    `;
   }
   if (totalScore > 80) {
-    let riskPa = document.getElementById('rpa');
-    riskPa.classList = 'chosen2';
+    let riskPa = document.getElementById('risk-profile');
+    riskPa.innerHTML = `
+    <h2>Your Risk Profile</h2>
+    <label for="risk-profile" class="a">
+    <input
+              type="radio"
+              name="risk-profile"
+              value="Very Aggressive"
+              checked
+            />Very Aggressive</label>
+    `;
   }
 }
