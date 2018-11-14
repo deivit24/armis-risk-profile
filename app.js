@@ -430,13 +430,13 @@ function caclRiskProfile() {
     let riskPvc = document.getElementById('risk-profile');
     riskPvc.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="ma">
+    <label for="risk-profile" class="ma">Very Conservative</label>
     <input
               type="radio"
               name="risk-profile"
               value="Very Conservative"
               checked
-            />Very Conservative</label>
+            />
     `;
   }
 
@@ -444,52 +444,52 @@ function caclRiskProfile() {
     let riskPc = document.getElementById('risk-profile');
     riskPc.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="c">
+    <label for="risk-profile" class="c">Conservative</label>
     <input
               type="radio"
               name="risk-profile"
               value="Conservative"
               checked
-            />Conservative</label>
+            />
     `;
   }
   if (totalScore > 40 && totalScore <= 60) {
     let riskPm = document.getElementById('risk-profile');
     riskPm.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="m">
+    <label for="risk-profile" class="m">Moderate</label>
     <input
               type="radio"
               name="risk-profile"
               value="Moderate"
               checked
-            />Moderate</label>
+            />
     `;
   }
   if (totalScore > 60 && totalScore <= 80) {
     let riskPma = document.getElementById('risk-profile');
     riskPma.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="ma">
+    <label for="risk-profile" class="ma">Moderately Aggressive</label>
     <input
               type="radio"
               name="risk-profile"
               value="Moderately Aggressive"
               checked
-            />Moderately Aggressive</label>
+            />
     `;
   }
   if (totalScore > 80) {
     let riskPa = document.getElementById('risk-profile');
     riskPa.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="a">
+    <label for="risk-profile" class="a">Very Aggressive</label>
     <input
               type="radio"
               name="risk-profile"
               value="Very Aggressive"
               checked
-            />Very Aggressive</label>
+            />
     `;
   }
 }
