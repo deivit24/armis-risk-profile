@@ -430,7 +430,7 @@ function caclRiskProfile() {
     let riskPvc = document.getElementById('risk-profile');
     riskPvc.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="ma">Very Conservative</label>
+    <label for="Very Conservative" class="ma">Very Conservative</label>
     <input
               type="radio"
               name="risk-profile"
@@ -444,7 +444,7 @@ function caclRiskProfile() {
     let riskPc = document.getElementById('risk-profile');
     riskPc.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="c">Conservative</label>
+    <label for="Conservative" class="c">Conservative</label>
     <input
               type="radio"
               name="risk-profile"
@@ -457,7 +457,7 @@ function caclRiskProfile() {
     let riskPm = document.getElementById('risk-profile');
     riskPm.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="m">Moderate</label>
+    <label for="Moderate" class="m">Moderate</label>
     <input
               type="radio"
               name="risk-profile"
@@ -470,7 +470,7 @@ function caclRiskProfile() {
     let riskPma = document.getElementById('risk-profile');
     riskPma.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="ma">Moderately Aggressive</label>
+    <label for="Moderately Aggressive" class="ma">Moderately Aggressive</label>
     <input
               type="radio"
               name="risk-profile"
@@ -483,7 +483,7 @@ function caclRiskProfile() {
     let riskPa = document.getElementById('risk-profile');
     riskPa.innerHTML = `
     <h2>Your Risk Profile</h2>
-    <label for="risk-profile" class="a">Very Aggressive</label>
+    <label for="Very Aggressive" class="a">Very Aggressive</label>
     <input
               type="radio"
               name="risk-profile"
