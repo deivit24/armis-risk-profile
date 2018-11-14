@@ -677,9 +677,20 @@
 
         <form method="POST" name="Risk-Profile-Questionnaire" netlify>
           <div class="container">
-            <div id="risk-capacity"></div>
-            <div id="risk-tolerance"></div>
-            <div id="risk-profile"></div>
+            <div id="risk-capacity">
+              <h2>Your Risk Capacity</h2>
+              <label for=""></label> <input type="radio" />
+            </div>
+            <div id="risk-tolerance">
+              <h2>Your Risk Tolerance</h2>
+              <label for=""></label>
+              <input type="radio" checked name="dfdsf" value="dfsfs" />
+            </div>
+            <div id="risk-profile">
+              <h2>Your Risk Profile</h2>
+              <label for="">???</label>
+              <input type="radio" checked value="checked" name="risk-profile" />
+            </div>
             <div id="risk-contact">
               <label for="first-name">First Name:</label>
               <input
@@ -696,13 +707,6 @@
                 placeholder="First Name"
                 required
               />
-              <input
-                type="radio"
-                name="languages"
-                checked
-                value="english language"
-              />
-              <label for="english ">english</label>
             </div>
           </div>
           <button type="submit">Send</button>

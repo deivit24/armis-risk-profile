@@ -229,8 +229,8 @@ body {
   #risk-profile h2 {
     text-align: center; }
   #risk-profile input {
-    width: 0;
-    height: 0; }
+    width: 0px;
+    height: 0px; }
   #risk-profile label {
     color: black;
     font-family: 'Ubuntu';

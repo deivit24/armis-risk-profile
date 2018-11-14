@@ -480,16 +480,16 @@ function caclRiskProfile() {
     `;
   }
   if (totalScore > 80) {
-    let riskPa = document.getElementById('risk-profile');
-    riskPa.innerHTML = `
-    <h2>Your Risk Profile</h2>
-    <label for="Very Aggressive" class="a">Very Aggressive</label>
-    <input
-              type="radio"
-              name="risk-profile"
-              value="Very Aggressive"
-              checked
-            />
-    `;
+    // let riskPa = document.getElementById('risk-profile');
+    // riskPa.innerHTML = `
+    // <h2>Your Risk Profile</h2>
+    // <label for="Very Aggressive" class="a">Very Aggressive</label>
+    // <input
+    //           type="radio"
+    //           name="risk-profile"
+    //           value="Very Aggressive"
+    //           checked
+    //         />
+    // `;
   }
 }
