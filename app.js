@@ -128,32 +128,32 @@ function calculateResults() {
   if (maxscore <= 20) {
     // If user chooses the first choice the most, this outcome will be displayed.
     // answerbox.innerHTML = `<p><span class="redd">Very Conservative</span> As a very conservative investor, your portfolio will be invested in the most risk-averse areas such as cash and fixed income securities. This approach offers a high degree of stability and should minimize the chances of substantial short-term volatility. Your main goal is preservation of wealth. The overall return, while not guaranteed, should fall within a narrow range of possibilities. However, particularly for time periods greater than five years, these returns may underperform the returns achievable from a higher-risk approach.</p>`;
-    document.getElementById('reset').className = 'show';
+    // document.getElementById('reset').className = 'show';
   }
   if (maxscore > 20) {
     // If user chooses the second choice the most, this outcome will be displayed.
-    answerbox.innerHTML =
-      '<p><span class="redd">Conservative</span> As a conservative investor, your portfolio will be invested primarily in risk-averse areas such as cash and fixed-income securities with only a modest exposure to equities. This approach concentrates on stability rather than maximizing return and should limit the chances of substantial short-term volatility. The overall return, while not guaranteed, should fall within a relatively narrow range of possibilities. However, particularly for time periods greater than five years, these returns may underperform the returns achievable from a higher-risk approach. </p>';
-    document.getElementById('reset').className = 'show';
+    // answerbox.innerHTML =
+    // '<p><span class="redd">Conservative</span> As a conservative investor, your portfolio will be invested primarily in risk-averse areas such as cash and fixed-income securities with only a modest exposure to equities. This approach concentrates on stability rather than maximizing return and should limit the chances of substantial short-term volatility. The overall return, while not guaranteed, should fall within a relatively narrow range of possibilities. However, particularly for time periods greater than five years, these returns may underperform the returns achievable from a higher-risk approach. </p>';
+    // document.getElementById('reset').className = 'show';
   }
   if (maxscore > 40) {
     // If user chooses the third choice the most, this outcome will be displayed.
-    answerbox.innerHTML =
-      '<p><span class="redd">Moderate</span>As a moderate investor, your portfolio will include investment in equities, balanced by exposure to more risk-averse areas of the market such as cash, fixed-income securities, and real estate. This approach aims to achieve a balance between stability and return but is likely to involve at least some short-term volatility. The overall return is not guaranteed, although the range of possible outcomes should not be extreme. In most circumstances, particularly for time periods greater than five years, these returns should outperform the returns achievable from a more conservative approach but may underperform the returns achievable from a higher-risk approach.</p>';
-    document.getElementById('reset').className = 'show';
+    // answerbox.innerHTML =
+    // '<p><span class="redd">Moderate</span>As a moderate investor, your portfolio will include investment in equities, balanced by exposure to more risk-averse areas of the market such as cash, fixed-income securities, and real estate. This approach aims to achieve a balance between stability and return but is likely to involve at least some short-term volatility. The overall return is not guaranteed, although the range of possible outcomes should not be extreme. In most circumstances, particularly for time periods greater than five years, these returns should outperform the returns achievable from a more conservative approach but may underperform the returns achievable from a higher-risk approach.</p>';
+    // document.getElementById('reset').className = 'show';
   }
   if (maxscore > 60) {
     // If user chooses the fourth choice the most, this outcome will be displayed.
-    answerbox.innerHTML =
-      '<p><span class="redd">Moderately Aggressive</span>As an moderately aggressive investor, your portfolio will be invested primarily in equities. This approach concentrates on achieving a good overall return on your investment while avoiding the most speculative areas of the market. Significant short-term fluctuations in value can be expected. The eventual return for the time period over which you invest could fall within a relatively wide range of possibilities. In most circumstances, particularly for time periods greater than five years, these returns should outperform the returns achievable from a more conservative approach.</p>';
-    document.getElementById('reset').className = 'show';
+    // answerbox.innerHTML =
+    // '<p><span class="redd">Moderately Aggressive</span>As an moderately aggressive investor, your portfolio will be invested primarily in equities. This approach concentrates on achieving a good overall return on your investment while avoiding the most speculative areas of the market. Significant short-term fluctuations in value can be expected. The eventual return for the time period over which you invest could fall within a relatively wide range of possibilities. In most circumstances, particularly for time periods greater than five years, these returns should outperform the returns achievable from a more conservative approach.</p>';
+    // document.getElementById('reset').className = 'show';
   }
 
   if (maxscore > 80) {
     // If user chooses the Fifth choice the most, this outcome will be displayed.
-    answerbox.innerHTML =
-      '<p><span class="redd">Very Aggressive</span>As a very aggressive investor, your portfolio will be invested in equities and will include exposure to more speculative areas of the market. The aim is to maximize return while accepting the possibility of large short-term fluctuations in value and even the possibility of longer-term losses. The eventual return for the time period over which you invest could fall within a wide range of possibilities. In most circumstances, the return should outperform the returns achievable from a more conservative approach.</p>';
-    document.getElementById('reset').className = 'show';
+    // answerbox.innerHTML =
+    // '<p><span class="redd">Very Aggressive</span>As a very aggressive investor, your portfolio will be invested in equities and will include exposure to more speculative areas of the market. The aim is to maximize return while accepting the possibility of large short-term fluctuations in value and even the possibility of longer-term losses. The eventual return for the time period over which you invest could fall within a wide range of possibilities. In most circumstances, the return should outperform the returns achievable from a more conservative approach.</p>';
+    // document.getElementById('reset').className = 'show';
   }
   // If you add more choices, you must add another response below.
 
@@ -203,6 +203,17 @@ $(document).on('click', "[href^='#']", function(e) {
   }
 });
 
+// Scroll Magic for table and results
+// var resultSlide = new ScrollMagic.Controller();
+
+// var slideScene = new ScrollMagic.Scene({
+//   triggerElement: '#riskTable',
+//   triggerHook: 0.5
+// })
+//   .setClassToggle('#riskTable', 'table-slide')
+//   .addIndicators()
+
+//   .addTo(resultSlide);
 // table javascript
 
 function caclRiskProfile() {

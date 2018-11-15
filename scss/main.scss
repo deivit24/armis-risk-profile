@@ -203,6 +203,8 @@ body {
 
 #table {
   text-align: center;
+  margin-top: -100px;
+
   h2 {
     font-family: 'Raleway';
   }
@@ -242,6 +244,8 @@ body {
       border-bottom: 1px solid #d89e04;
     }
   }
+}
+#riskTable {
 }
 
 // netlify form at the bottom
@@ -303,7 +307,7 @@ body {
     font-family: 'Ubuntu';
     font-size: 1.5rem;
     padding: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
     width: 250px;
     margin: 0%;
   }
@@ -324,17 +328,39 @@ body {
   }
 }
 
-.chosen {
-  background: lighten(#d89e04, 30);
-  color: black;
-  font-size: 1.2rem;
-}
-.chosen2 {
-  background: #d89e04;
-  color: black;
+#risk-contact {
+  margin-top: 25px;
+  padding: 20px;
+  text-align: left;
 
-  font-size: 1.2rem;
-  border: 1px solid black;
+  label {
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 50%;
+    border-top-right-radius: 25px;
+
+    font-family: 'Raleway';
+    font-size: 1.2rem;
+  }
+  input {
+    background: lighten(#d89e04, 40);
+    color: black;
+  }
+  select {
+    background: lighten(#d89e04, 40);
+    color: black;
+  }
+}
+
+#first-box {
+  .col {
+  }
+}
+#second-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .show {

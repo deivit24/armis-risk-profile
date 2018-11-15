@@ -664,8 +664,8 @@
         </div>
       </div>
       <div class="container invisible" id="table">
-        <h2>Risk Levels</h2>
-        <table>
+        <h2 id="riskLevel">Risk Levels</h2>
+        <table id="riskTable">
           <tr>
             <th class="vc">Very Conservative</th>
             <th class="c">Conservative</th>
@@ -677,50 +677,115 @@
 
         <form method="POST" name="Risk-Profile-Questionnaire" netlify>
           <div class="container">
-            <div id="risk-capacity">
-              <h2>Your Risk Capacity</h2>
-              <label for=""></label>
-              <input
-                type="radio"
-                checked
-                name="risk-capacity"
-                value="checked"
-              />
-            </div>
-            <div id="risk-tolerance">
-              <h2>Your Risk Tolerance</h2>
-              <label for=""></label>
-              <input
-                type="radio"
-                checked
-                name="risk-tolerance"
-                value="checked"
-              />
-            </div>
-            <div id="risk-profile">
-              <h2>Your Risk Profile</h2>
-              <label for=""></label>
-              <input type="radio" checked value="checked" name="risk-profile" />
+            <div class="row">
+              <div class="col-md-6" id="first-box">
+                <div id="risk-capacity" class="col">
+                  <h2>Your Risk Capacity</h2>
+                  <label for=""></label>
+                  <input
+                    type="radio"
+                    checked
+                    name="risk-capacity"
+                    value="checked"
+                  />
+                </div>
+
+                <div id="risk-tolerance" class="col">
+                  <h2>Your Risk Tolerance</h2>
+                  <label for=""></label>
+                  <input
+                    type="radio"
+                    checked
+                    name="risk-tolerance"
+                    value="checked"
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-6" id="second-box">
+                <div id="risk-profile">
+                  <h2>Your Risk Profile</h2>
+                  <label for=""></label>
+                  <input
+                    type="radio"
+                    checked
+                    value="checked"
+                    name="risk-profile"
+                  />
+                </div>
+              </div>
             </div>
             <div id="risk-contact">
-              <label for="first-name">First Name:</label>
-              <input
-                type="text"
-                name="first-name"
-                placeholder="First Name"
-                required
-              />
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="first-name">First Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputFName"
+                    placeholder="Last Name"
+                    name="first-name"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="last-name">Last Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputLName"
+                    placeholder="Last Name"
+                    name="last-name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="johndoe@example.com"
+                    name="email"
+                    required
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >We'll never share your email with anyone else.</small
+                  >
+                </div>
 
-              <label for="last-name">Last Name:</label>
-              <input
-                type="text"
-                name="last-name"
-                placeholder="First Name"
-                required
-              />
+                <div class="form-group col-md-6">
+                  <label for="inputState">User:</label>
+                  <select
+                    id="inputUser"
+                    class="form-control"
+                    required
+                    name="User"
+                  >
+                    <option selected>Choose...</option>
+                    <option>Client</option>
+                    <option>Guest</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
-          <button type="submit">Send</button>
+          <div class="row">
+            <div class="col-6">
+              <button
+                type="reset"
+                class="btn btn-danger"
+                onclick="resetAnswer()"
+              >
+                Reset
+              </button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-success" type="submit">Send</button>
+            </div>
+          </div>
         </form>
       </div>
       <div id="answer"></div>

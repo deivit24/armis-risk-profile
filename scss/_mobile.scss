@@ -166,4 +166,36 @@
       }
     }
   }
+  #riskTable,
+  #riskLevel {
+    display: none;
+  }
+  #risk-capacity,
+  #risk-tolerance {
+    padding: 5px;
+    margin-top: 10px;
+    h2 {
+      font-size: 1.2rem;
+    }
+    label {
+      padding: 5px;
+    }
+  }
+  #risk-profile {
+    padding: 5px;
+    margin-top: 10px;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  #risk-contact {
+    padding: 5px 5px 20px 5px;
+
+    label {
+      padding: 5px;
+      margin-bottom: 0px;
+      font-size: 1rem;
+    }
+  }
 }
