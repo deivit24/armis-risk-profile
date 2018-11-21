@@ -53,7 +53,7 @@ body {
 
   .form-contain {
     padding: 25px 20px;
-    margin-top: 50px;
+
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 
@@ -219,29 +219,24 @@ body {
       width: 500px;
       font-family: 'Ubuntu';
     }
-    .vc {
+    #vc {
       background: lighten(#d89e04, 40);
     }
-    .c {
+    #c {
       background: lighten(#d89e04, 35);
     }
-    .m {
+    #m {
       background: lighten(#d89e04, 30);
     }
-    .ma {
+    #ma {
       background: lighten(#d89e04, 25);
     }
-    .va {
+    #va {
       background: lighten(#d89e04, 20);
     }
 
-    .rch,
-    .rth {
-      background: lighten(#d89e04, 30);
-    }
-    .rph {
-      background: #d89e04;
-      border-bottom: 1px solid #d89e04;
+    .chosen {
+      border: 2px solid #d89e04;
     }
   }
 }
@@ -329,19 +324,20 @@ body {
 }
 
 #risk-contact {
-  margin-top: 25px;
-  padding: 20px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   label {
     background: black;
     color: white;
     padding: 10px;
-    width: 50%;
+    width: 100%;
     border-top-right-radius: 25px;
-
+    border-top-left-radius: 25px;
+    margin-bottom: 0px;
     font-family: 'Raleway';
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   input {
     background: lighten(#d89e04, 40);
@@ -354,13 +350,29 @@ body {
 }
 
 #first-box {
-  .col {
-  }
-}
-#second-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#second-box {
+}
+#third-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-size: 1.5rem;
+    color: white;
+    background: black;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+}
+
+#table-row {
+  margin-top: 25px;
 }
 
 .show {

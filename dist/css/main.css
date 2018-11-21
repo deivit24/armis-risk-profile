@@ -41,7 +41,6 @@ body {
     justify-content: center; }
   body .form-contain {
     padding: 25px 20px;
-    margin-top: 50px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     transition: transform 0.1s ease-in-out;
@@ -167,22 +166,18 @@ body {
     border: 1px solid black;
     width: 500px;
     font-family: 'Ubuntu'; }
-  #table tr .vc {
+  #table tr #vc {
     background: #fde7ab; }
-  #table tr .c {
+  #table tr #c {
     background: #fde092; }
-  #table tr .m {
+  #table tr #m {
     background: #fdd878; }
-  #table tr .ma {
+  #table tr #ma {
     background: #fcd15f; }
-  #table tr .va {
+  #table tr #va {
     background: #fcca46; }
-  #table tr .rch,
-  #table tr .rth {
-    background: #fdd878; }
-  #table tr .rph {
-    background: #d89e04;
-    border-bottom: 1px solid #d89e04; }
+  #table tr .chosen {
+    border: 2px solid #d89e04; }
 
 #risk-capacity,
 #risk-tolerance {
@@ -252,17 +247,19 @@ body {
     background: #fcca46; }
 
 #risk-contact {
-  margin-top: 25px;
-  padding: 20px;
-  text-align: left; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   #risk-contact label {
     background: black;
     color: white;
     padding: 10px;
-    width: 50%;
+    width: 100%;
     border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin-bottom: 0px;
     font-family: 'Raleway';
-    font-size: 1.2rem; }
+    font-size: 1rem; }
   #risk-contact input {
     background: #fde7ab;
     color: black; }
@@ -270,13 +267,34 @@ body {
     background: #fde7ab;
     color: black; }
 
-#second-box {
+#first-box {
   display: flex;
   flex-direction: column;
   justify-content: center; }
 
+#third-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #third-box h2 {
+    font-size: 1.5rem;
+    color: white;
+    background: black;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px; }
+
+#table-row {
+  margin-top: 25px; }
+
 .show {
   display: block; }
+
+@media screen and (max-width: 768px) {
+  #riskTable,
+  #riskLevel {
+    display: none; } }
 
 @media screen and (max-width: 500px) {
   body #sec1 .container img {
@@ -390,8 +408,11 @@ body {
       font-size: 1.5rem;
       font-weight: bold; }
   #risk-contact {
-    padding: 5px 5px 20px 5px; }
+    padding: 5px 5px 20px 5px;
+    text-align: left; }
     #risk-contact label {
       padding: 5px;
       margin-bottom: 0px;
-      font-size: 1rem; } }
+      font-size: 1rem;
+      width: 50%;
+      border-top-left-radius: 0px; } }

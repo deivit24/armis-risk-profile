@@ -34,6 +34,10 @@
 // Tablets
 
 @include mediaMd {
+  #riskTable,
+  #riskLevel {
+    display: none;
+  }
 }
 
 // Smart Phones
@@ -191,11 +195,13 @@
   }
   #risk-contact {
     padding: 5px 5px 20px 5px;
-
+    text-align: left;
     label {
       padding: 5px;
       margin-bottom: 0px;
       font-size: 1rem;
+      width: 50%;
+      border-top-left-radius: 0px;
     }
   }
 }

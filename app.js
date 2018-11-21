@@ -449,6 +449,8 @@ function caclRiskProfile() {
               checked
             />
     `;
+    let vcRisk = document.getElementById('vc');
+    vcRisk.classList = 'chosen';
   }
 
   if (totalScore > 20 && totalScore <= 40) {
@@ -463,6 +465,8 @@ function caclRiskProfile() {
               checked
             />
     `;
+    let cRisk = document.getElementById('c');
+    cRisk.classList = 'chosen';
   }
   if (totalScore > 40 && totalScore <= 60) {
     let riskPm = document.getElementById('risk-profile');
@@ -476,6 +480,8 @@ function caclRiskProfile() {
               checked
             />
     `;
+    let mRisk = document.getElementById('m');
+    mRisk.classList = 'chosen';
   }
   if (totalScore > 60 && totalScore <= 80) {
     let riskPma = document.getElementById('risk-profile');
@@ -489,6 +495,8 @@ function caclRiskProfile() {
               checked
             />
     `;
+    let maRisk = document.getElementById('ma');
+    maRisk.classList = 'chosen';
   }
   if (totalScore > 80) {
     let riskPa = document.getElementById('risk-profile');
@@ -502,5 +510,7 @@ function caclRiskProfile() {
               checked
             />
     `;
+    let vaRisk = document.getElementById('va');
+    vaRisk.classList = 'chosen';
   }
 }
