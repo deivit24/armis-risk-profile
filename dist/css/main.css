@@ -303,6 +303,8 @@ body {
     font-size: 18px; }
   body #sec1 .container p {
     font-size: 15px; }
+  body #third-p {
+    display: none; }
   body .form-contain {
     padding: 25px 20px;
     margin-top: 50px;
@@ -393,17 +395,11 @@ body {
     display: none; }
   #risk-capacity,
   #risk-tolerance {
-    padding: 5px;
-    margin-top: 10px; }
-    #risk-capacity h2,
-    #risk-tolerance h2 {
-      font-size: 1.2rem; }
-    #risk-capacity label,
-    #risk-tolerance label {
-      padding: 5px; }
+    display: none; }
   #risk-profile {
     padding: 5px;
-    margin-top: 10px; }
+    margin-top: -25px;
+    margin-bottom: 15px; }
     #risk-profile h2 {
       font-size: 1.5rem;
       font-weight: bold; }

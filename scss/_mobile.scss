@@ -57,6 +57,9 @@
         }
       }
     }
+    #third-p {
+      display: none;
+    }
 
     .form-contain {
       padding: 25px 20px;
@@ -176,18 +179,12 @@
   }
   #risk-capacity,
   #risk-tolerance {
-    padding: 5px;
-    margin-top: 10px;
-    h2 {
-      font-size: 1.2rem;
-    }
-    label {
-      padding: 5px;
-    }
+    display: none;
   }
   #risk-profile {
     padding: 5px;
-    margin-top: 10px;
+    margin-top: -25px;
+    margin-bottom: 15px;
     h2 {
       font-size: 1.5rem;
       font-weight: bold;
