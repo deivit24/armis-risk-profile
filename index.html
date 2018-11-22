@@ -34,7 +34,7 @@
     <section id="sec1">
       <div class="container">
         <img src="img/armis.png" alt="" />
-        <h1>Welcome to the first step of establishing your Risk Profile!</h1>
+        <h1>Risk Profile Questionnaire</h1>
 
         <p>
           Investing is a challenging topic. The key to investing is
@@ -57,15 +57,23 @@
           not only help us get a better understanding of your financial goals
           but what road to take to get there.
         </p>
-        <button
-          class="button_header"
-          id="startQuizBtn"
-          onclick="startQuiz()"
-          type="button"
-          href="#form-con"
-        >
-          Start
-        </button>
+        <div class="container" id="button-container">
+          <div class="row">
+            <div class="col-6"><button
+              class="button_header"
+              id="startQuizBtn"
+              onclick="startQuiz()"
+              type="button"
+              href="#form-con"
+            >
+              Start
+            </button></div>
+            <div class="col-6">
+             <a href="https://armisfinancial.com" id="homeButton" class="btn"> Home</a>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
     <section id="form-con">
@@ -663,7 +671,7 @@
           <img src="img/giphy.gif" alt="" class="img-fluid" />
         </div>
       </div>
-      <div class="container invisible" id="table">
+      <div class="container-fluid invisible" id="table">
         <form method="POST" name="Risk-Profile-Questionnaire" netlify>
           <div class="container">
             <div class="row">

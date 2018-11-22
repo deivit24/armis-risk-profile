@@ -11,7 +11,7 @@ body {
     body #sec1 .container {
       text-align: center; }
       body #sec1 .container h1 {
-        font-family: 'Raleway';
+        font-family: 'Ubuntu';
         color: white;
         font-size: 30px;
         margin-bottom: 25px; }
@@ -27,18 +27,36 @@ body {
       width: 100px;
       border: black 2px solid;
       color: black;
-      transition: all 0.3s ease-in-out; }
+      transition: all 0.3s ease-in-out;
+      height: 100%; }
       body #sec1 #startQuizBtn:hover {
         cursor: pointer;
         border: #d89e04 2px solid;
         font-size: 1.2rem;
         width: 120px; }
+    body #sec1 #homeButton {
+      background: white;
+      width: 100px;
+      border: black 2px solid;
+      color: black;
+      transition: all 0.3s ease-in-out; }
+      body #sec1 #homeButton:hover {
+        cursor: pointer;
+        border: #d89e04 2px solid;
+        font-size: 1.2rem;
+        width: 120px; }
+    body #sec1 #button-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
   body #form-con {
     transition: all 1s ease-in-out;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    background: #f4f4f4;
+    box-shadow: inset 0px 0px 13px 5px rgba(68, 68, 68, 0.2); }
   body .form-contain {
     padding: 25px 20px;
     border-top-right-radius: 5px;
@@ -177,11 +195,12 @@ body {
   #table tr #va {
     background: #fcca46; }
   #table tr .chosen {
-    border: 2px solid #d89e04; }
+    border: 2px solid #d89e04;
+    font-weight: bold;
+    font-size: 1.2rem; }
 
 #risk-capacity,
 #risk-tolerance {
-  background: white;
   padding: 10px;
   margin-top: 25px;
   color: black; }
@@ -218,7 +237,6 @@ body {
     background: #fcca46; }
 
 #risk-profile {
-  background: white;
   padding: 10px;
   margin-top: 25px;
   color: black; }
