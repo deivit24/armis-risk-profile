@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   background: #fff;
+
   #sec1 {
     display: flex;
     flex-direction: column;
@@ -8,14 +9,17 @@ body {
     background: #333;
     height: 100vh;
     transition: all 1s ease-in-out;
+
     .container {
       text-align: center;
+
       h1 {
         font-family: 'Ubuntu';
         color: white;
         font-size: 30px;
         margin-bottom: 25px;
       }
+
       img {
         width: 500px;
       }
@@ -43,6 +47,7 @@ body {
         width: 120px;
       }
     }
+
     #homeButton {
       background: white;
       width: 100px;
@@ -57,19 +62,21 @@ body {
         width: 120px;
       }
     }
+
     #button-container {
       display: flex;
       flex-direction: row;
       justify-content: center;
     }
   }
+
   #form-con {
     transition: all 1s ease-in-out;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #f4f4f4;
+    background: white;
     box-shadow: inset 0px 0px 13px 5px rgba(68, 68, 68, 0.2);
   }
 
@@ -81,6 +88,7 @@ body {
 
     transition: transform 0.1s ease-in-out;
     width: 600px;
+
     #input-progress {
       border-bottom: 3px solid #d89e04;
       width: 0;
@@ -111,6 +119,7 @@ body {
           font-size: 1rem;
         }
       }
+
       h2 {
         font-size: 1.2rem;
         font-family: 'Raleway';
@@ -121,6 +130,7 @@ body {
 
         width: 100%;
       }
+
       .contain {
         position: relative;
         padding-left: 35px;
@@ -131,6 +141,7 @@ body {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+
         .checkmark {
           top: 0;
           left: 0;
@@ -139,12 +150,14 @@ body {
           background-color: #eee;
           border-radius: 50%;
           position: absolute;
+
           &:after {
             content: '';
             position: absolute;
             display: none;
           }
         }
+
         .checkmark:after {
           transition: all 0.5s ease-in-out;
           top: 6px;
@@ -154,17 +167,21 @@ body {
           border-radius: 50%;
           background: white;
         }
-        &:hover input ~ .checkmark {
+
+        &:hover input~.checkmark {
           background-color: #ccc;
         }
+
         input {
           position: absolute;
           opacity: 0;
           cursor: pointer;
           height: 0;
           width: 0;
-          &:checked ~ .checkmark {
+
+          &:checked~.checkmark {
             background-color: #d89e04;
+
             &:after {
               display: block;
             }
@@ -183,11 +200,13 @@ body {
 #answer {
   display: none;
   text-align: center;
+
   img {
     width: 250px;
     text-align: center;
   }
 }
+
 .redd {
   color: red;
 }
@@ -197,11 +216,13 @@ body {
   .row {
     margin-top: 25px;
   }
+
   #reset {
     margin-left: 20px;
     background: white;
     border: 1px solid black;
     font-family: 'Raleway';
+
     &:hover {
       background: darken($color: #d89e04, $amount: 10);
       color: white;
@@ -210,17 +231,60 @@ body {
       cursor: pointer;
     }
   }
+
   #confirm_answer {
     margin-left: 450px;
+
     a {
       font-size: 2rem;
       color: #d89e04;
+
       &:hover {
         cursor: pointer;
         color: darken($color: #d89e04, $amount: 10);
       }
     }
   }
+}
+
+#question10 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  border-bottom: 1px solid black;
+
+  th {
+    padding: 5px;
+    border-bottom: darken(#d89e04, 20) solid 1px;
+    border-top: darken(#d89e04, 20) solid 1px;
+    border-right: darken(#d89e04, 20) solid 1px;
+    border-left: darken(#d89e04, 20) solid 1px;
+
+  }
+
+  .t-row {
+    background: lighten(#d89e04, 40);
+  }
+
+  td {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .gain {
+    color: green;
+    font-weight: bold;
+  }
+
+  .loss {
+    color: red;
+    font-weight: bold;
+  }
+
+
 }
 
 #table {
@@ -241,18 +305,23 @@ body {
       width: 500px;
       font-family: 'Ubuntu';
     }
+
     #vc {
       background: lighten(#d89e04, 40);
     }
+
     #c {
       background: lighten(#d89e04, 35);
     }
+
     #m {
       background: lighten(#d89e04, 30);
     }
+
     #ma {
       background: lighten(#d89e04, 25);
     }
+
     #va {
       background: lighten(#d89e04, 20);
     }
@@ -264,8 +333,8 @@ body {
     }
   }
 }
-#riskTable {
-}
+
+#riskTable {}
 
 // netlify form at the bottom
 
@@ -275,14 +344,17 @@ body {
   margin-top: 25px;
 
   color: black;
+
   h2 {
     text-align: center;
     font-size: 1.5rem;
   }
+
   input {
     width: 0;
     height: 0;
   }
+
   label {
     color: black;
     font-family: 'Ubuntu';
@@ -291,18 +363,23 @@ body {
     width: 200px;
     margin: 0%;
   }
+
   .vc {
     background: lighten(#d89e04, 40);
   }
+
   .c {
     background: lighten(#d89e04, 35);
   }
+
   .m {
     background: lighten(#d89e04, 30);
   }
+
   .ma {
     background: lighten(#d89e04, 25);
   }
+
   .a {
     background: lighten(#d89e04, 20);
   }
@@ -312,13 +389,16 @@ body {
   padding: 10px;
   margin-top: 25px;
   color: black;
+
   h2 {
     text-align: center;
   }
+
   input {
     width: 0px;
     height: 0px;
   }
+
   label {
     color: black;
     font-family: 'Ubuntu';
@@ -328,18 +408,23 @@ body {
     width: 250px;
     margin: 0%;
   }
+
   .vc {
     background: lighten(#d89e04, 40);
   }
+
   .c {
     background: lighten(#d89e04, 35);
   }
+
   .m {
     background: lighten(#d89e04, 30);
   }
+
   .ma {
     background: lighten(#d89e04, 25);
   }
+
   .a {
     background: lighten(#d89e04, 20);
   }
@@ -361,10 +446,12 @@ body {
     font-family: 'Raleway';
     font-size: 1rem;
   }
+
   input {
     background: lighten(#d89e04, 40);
     color: black;
   }
+
   select {
     background: lighten(#d89e04, 40);
     color: black;
@@ -376,12 +463,14 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-#second-box {
-}
+
+#second-box {}
+
 #third-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   h2 {
     font-size: 1.5rem;
     color: white;

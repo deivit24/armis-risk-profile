@@ -25,15 +25,14 @@
 }
 
 // Wide Screens
-@include mediaXl {
-}
+@include mediaXl {}
 
-@include mediaLg {
-}
+@include mediaLg {}
 
 // Tablets
 
 @include mediaMd {
+
   #riskTable,
   #riskLevel {
     display: none;
@@ -49,14 +48,17 @@
         img {
           width: 250px;
         }
+
         h1 {
           font-size: 18px;
         }
+
         p {
           font-size: 15px;
         }
       }
     }
+
     #third-p {
       display: none;
     }
@@ -68,6 +70,7 @@
       border-top-left-radius: 5px;
       transition: transform 0.1s ease-in-out;
       width: 350px;
+
       #input-progress {
         border-bottom: 3px solid #d89e04;
         width: 0;
@@ -98,6 +101,7 @@
             font-size: 1rem;
           }
         }
+
         h2 {
           font-size: 1rem;
           font-family: 'Raleway';
@@ -107,6 +111,7 @@
           padding: 15px 10px;
           width: 100%;
         }
+
         .contain {
           position: relative;
           padding-left: 35px;
@@ -117,6 +122,7 @@
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
+
           .checkmark {
             top: 0;
             left: 0;
@@ -125,12 +131,14 @@
             background-color: #eee;
             border-radius: 50%;
             position: absolute;
+
             &:after {
               content: '';
               position: absolute;
               display: none;
             }
           }
+
           .checkmark:after {
             transition: all 0.5s ease-in-out;
             top: 6px;
@@ -140,17 +148,21 @@
             border-radius: 50%;
             background: white;
           }
-          &:hover input ~ .checkmark {
+
+          &:hover input~.checkmark {
             background-color: #ccc;
           }
+
           input {
             position: absolute;
             opacity: 0;
             cursor: pointer;
             height: 0;
             width: 0;
-            &:checked ~ .checkmark {
+
+            &:checked~.checkmark {
               background-color: #d89e04;
+
               &:after {
                 display: block;
               }
@@ -160,12 +172,15 @@
       }
     }
   }
+
   #quiz {
     #confirm_answer {
       margin-left: 150px;
+
       a {
         font-size: 2rem;
         color: #d89e04;
+
         &:hover {
           cursor: pointer;
           color: darken($color: #d89e04, $amount: 10);
@@ -173,32 +188,53 @@
       }
     }
   }
+
   #riskTable,
   #riskLevel {
     display: none;
   }
+
   #risk-capacity,
   #risk-tolerance {
     display: none;
   }
+
   #risk-profile {
     padding: 5px;
     margin-top: -25px;
     margin-bottom: 15px;
+
     h2 {
       font-size: 1.5rem;
       font-weight: bold;
     }
   }
+
   #risk-contact {
     padding: 5px 5px 20px 5px;
     text-align: left;
+
     label {
       padding: 5px;
       margin-bottom: 0px;
       font-size: 1rem;
       width: 50%;
       border-top-left-radius: 0px;
+    }
+  }
+
+  #question10 {
+    tr {
+      padding: 0px;
+      font-size: .8rem;
+    }
+
+    th {
+      padding: 1px;
+    }
+
+    td {
+      padding: 0px;
     }
   }
 }
