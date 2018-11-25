@@ -170,6 +170,7 @@ function calculateResults() {
   document.getElementById('result-form').classList.remove('invisible');
 
   caclRiskProfile();
+
 }
 
 // program the reset button
@@ -209,18 +210,7 @@ $(document).on('click', "[href^='#']", function (e) {
   }
 });
 
-// Scroll Magic for table and results
-// var resultSlide = new ScrollMagic.Controller();
 
-// var slideScene = new ScrollMagic.Scene({
-//   triggerElement: '#riskTable',
-//   triggerHook: 0.5
-// })
-//   .setClassToggle('#riskTable', 'table-slide')
-//   .addIndicators()
-
-//   .addTo(resultSlide);
-// table javascript
 
 function caclRiskProfile() {
   let rc1score = 0;
@@ -519,7 +509,9 @@ function caclRiskProfile() {
     let vaRisk = document.getElementById('va');
     vaRisk.classList = 'chosen';
   }
-}
 
+
+
+}
 
 // side swipe panels
