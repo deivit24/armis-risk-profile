@@ -1,359 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+      integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway|Roboto"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="dist/css/main.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
-    crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway|Roboto" rel="stylesheet" />
+    <title>Armis Financial | Risk Profile Questionnaire</title>
+  </head>
 
-  <title>Armis Financial | Risk Profile Questionnaire</title>
-</head>
+  <body>
+    <section id="sec1">
+      <div class="container">
+        <img src="img/armis.png" alt="" />
+        <h1>Risk Profile Questionnaire</h1>
 
-<body>
-  <section id="sec1">
-    <div class="container">
-      <img src="img/armis.png" alt="" />
-      <h1>Risk Profile Questionnaire</h1>
-
-      <p>
-        Investing is a challenging topic. The key to investing is
-        understanding the principles which should drive your investment
-        decision. Two of the most important principles are knowing yourself
-        and understanding risk. Most firms have Risk Tolerance Questionnaires
-        that are designed to get you invested into their products. Since Armis
-        Financial is a “fee-only” firm that gets paid for advice not by how
-        much or what we sell. Armis Financial has no bias here.
-      </p>
-      <p>
-        This questionnaire was developed to help you understand yourself. This
-        Questionnaire has 10 questions that are divided in two sections:
-        Understanding your Risk Capacity and Understanding your own Tolerance
-        to Risk.
-      </p>
-      <p id="third-p">
-        After we gauge these two elements, we will be able to measure the
-        results and cross-reference what your true Risk Profile is. This will
-        not only help us get a better understanding of your financial goals
-        but what road to take to get there.
-      </p>
-      <div class="container" id="button-container">
-        <div class="row">
-          <div class="col-6"><button class="button_header" id="startQuizBtn" onclick="startQuiz()" type="button" href="#form-con">
-              Start
-            </button></div>
-          <div class="col-6">
-            <a href="https://armisfinancial.com" id="homeButton" class="btn"> Home</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <section id="form-con">
-    <div class="container form-contain">
-      <div id="input-progress"></div>
-
-      <div id="progress-bar"></div>
-
-      <form id="quiz">
-        <div class="question invisible" id="question-1">
-          <h1>Risk Capacity<span> - Time Horizon</span></h1>
-          <!-- Question 1 -->
-          <h2>1. What is your current age?</h2>
-          <!--
-              Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1.
-            -->
-          <!-- The value is which answer the choice corresponds to. -->
-          <label class="contain"><input type="radio" name="q1" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> More than 60 </label><br />
-          <label class="contain"><input type="radio" name="q1" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Between 51 and 60 </label><br />
-          <label class="contain"><input type="radio" name="q1" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Between 41 and 50 </label><br />
-          <label class="contain"><input type="radio" name="q1" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Between 31 and 40 </label><br />
-          <label class="contain"><input type="radio" name="q1" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 30 or Younger </label><br />
-        </div>
-
-        <div class="question invisible" id="question-2">
-          <h1>Risk Capacity<span> - Time Horizon</span></h1>
-          <!-- Question 2 -->
-          <h2>
-            2. Please estimate when you will need to withdraw 20% of your
-            current portfolio value, such as a need for a house down payment
-            or some other major financial need?
-          </h2>
-          <!--
-              Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question.
-            -->
-          <label class="contain"><input type="radio" name="q2" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Within the next year </label><br />
-          <label class="contain"><input type="radio" name="q2" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 2 – 5 Years from now </label><br />
-          <label class="contain"><input type="radio" name="q2" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 5 – 10 Years from now </label><br />
-          <label class="contain"><input type="radio" name="q2" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 10 – 20 Years from now </label><br />
-          <label class="contain"><input type="radio" name="q2" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> More than 20 Years from now </label><br />
-        </div>
-        <div class="question invisible" id="question-3">
-          <h1>Risk Capacity<span> - Liquidity</span></h1>
-          <!-- Question 3 -->
-          <h2>
-            3. If you were to lose your job today, how long will you be able
-            to maintain your current spending life style before you run out of
-            money in your Savings and Checking account?
-          </h2>
-          <!-- Choices for the third question -->
-          <label class="contain"><input type="radio" name="q3" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 1 Week </label><br />
-          <label class="contain"><input type="radio" name="q3" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 1 Month </label><br />
-          <label class="contain"><input type="radio" name="q3" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 3 Months </label><br />
-          <label class="contain"><input type="radio" name="q3" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 6 Months </label><br />
-          <label class="contain"><input type="radio" name="q3" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> 1 Year or More </label><br />
-        </div>
-        <div class="question invisible" id="question-4">
-          <h1>Risk Capacity<span> - Income</span></h1>
-          <!-- Question 4 -->
-          <h2>4. What is your total annual income?</h2>
-          <!-- Choices for the fourth question -->
-          <label class="contain"><input type="radio" name="q4" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Less than $50,000 </label><br />
-          <label class="contain"><input type="radio" name="q4" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> $50,000 – $100,000 </label><br />
-          <label class="contain"><input type="radio" name="q4" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> $100,000 – $150,000 </label><br />
-          <label class="contain"><input type="radio" name="q4" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> $150,000 – $250,000 </label><br />
-          <label class="contain"><input type="radio" name="q4" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> More than $250,000 </label><br />
-        </div>
-        <div class="question invisible" id="question-5">
-          <h1>Risk Capacity<span> - Reliability</span></h1>
-          <!-- Question 5 -->
-          <h2>5. Please rate the stability of your income.</h2>
-          <!-- Choices for the fourth question -->
-          <label class="contain"><input type="radio" name="q5" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Very Low </label><br />
-          <label class="contain"><input type="radio" name="q5" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Below Average </label><br />
-          <label class="contain"><input type="radio" name="q5" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Average </label><br />
-          <label class="contain"><input type="radio" name="q5" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Above Average </label><br />
-          <label class="contain"><input type="radio" name="q5" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Very High </label><br />
-        </div>
-        <div class="question invisible" id="question-6">
-          <h1>Risk Tolerance<span> - Behavior</span></h1>
-          <!-- Question 6 -->
-          <h2>
-            6. If you unexpectedly received $20,000 to invest today, what
-            would you do?
-          </h2>
-          <!-- Choices for the fourth question -->
-          <label class="contain"><input type="radio" name="q6" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Deposit it in a bank account,
-            money market account, or an insured CD. </label><br />
-          <label class="contain"><input type="radio" name="q6" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Invest only in safe quality bonds
-            or bond funds. </label><br />
-          <label class="contain"><input type="radio" name="q6" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Invest in a proper mix of bonds
-            and stocks </label><br />
-          <label class="contain"><input type="radio" name="q6" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Invest only in stocks or stock
-            funds </label><br />
-          <label class="contain"><input type="radio" name="q6" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Buy $20,000 worth of lottery
-            tickets. </label><br />
-        </div>
-        <div class="question invisible" id="question-7">
-          <h1>Risk Tolerance<span> - Perception</span></h1>
-          <!-- Question 7 -->
-          <h2>
-            7. When you think of the word “risk” in a financial context, which
-            of the following words come to mind?
-          </h2>
-          <!-- Choices for the fourth question -->
-          <label class="contain"><input type="radio" name="q7" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Absolute Loss </label><br />
-          <label class="contain"><input type="radio" name="q7" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Danger </label><br />
-          <label class="contain"><input type="radio" name="q7" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Uncertainty </label><br />
-          <label class="contain"><input type="radio" name="q7" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Opportunity </label><br />
-          <label class="contain"><input type="radio" name="q7" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Thrill </label><br />
-        </div>
-        <div class="question invisible" id="question-8">
-          <h1>Risk Tolerance<span> - Short-Term</span></h1>
-          <!-- Question 8 -->
-          <h2>
-            8. Which of these statements would best describe your attitudes
-            about the next three years performance of this investment?
-          </h2>
-          <!-- Choices for the fourth question -->
-          <label class="contain"><input type="radio" name="q8" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> I need to see at least a little
-            return </label><br />
-          <label class="contain"><input type="radio" name="q8" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> I’d have a hard time tolerating
-            any losses </label><br />
-          <label class="contain"><input type="radio" name="q8" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> I can tolerate a small loss </label><br />
-          <label class="contain"><input type="radio" name="q8" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> I can tolerate a loss </label><br />
-          <label class="contain"><input type="radio" name="q8" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> I don’t mind a loss </label><br />
-        </div>
-        <div class="question invisible" id="question-9">
-          <h1>Risk Tolerance<span> - Volatility</span></h1>
-          <!-- Question 9 -->
-          <h2>
-            9. Throughout the 17-month bear during 
-            the 2008 Mortgage Crisis, the S&P 500 lost 50% of its value. Which
-            of the following would you have done if your portfolio experiences
-            a 50% loss?
-          </h2>
-          <!-- Choices for the ninth question -->
-          <label class="contain"><input type="radio" name="q9" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Sell all of your remaining
-            investments and remain in cash </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Move all of your investments into
-            Bonds and CDs </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Change the allocation of your
-            portfolio to something more conservative </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Hold on to your investment </label><br />
-          <label class="contain"><input type="radio" name="q9" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Invest more </label><br />
-        </div>
-        <div class="question invisible" id="question-10">
-          <h1>Risk Capacity<span> - Volatility</span></h1>
-          <!-- Question 10 -->
-          <h2>10. How emotionally comfortable are you with volatility?</h2>
-          <p>
-            Which the following portfolios are you
-            more comfortable with given the best-case and worst-case annual return?
-
-          </p>
-          <small class="form-text text-muted">The figures are hypothetical and do not represent the
-            performance of any particular investment.</small>
-          <table id="question10">
-            <tr >
-              <th>Plan</th>
-              <th>Best-case</th>
-              <th>Worst-case</th>
-              <th>Average Annual Return</th>
-
-            </tr>
-            <tr class="t-row">
-              <td>A</td>
-              <td class="gain">16.1%</td>
-              <td class="loss">-5.4%</td>
-              <td>7.0%</td>
-
-            </tr>
-            <tr>
-              <td>B</td>
-              <td class="gain">24.8%</td>
-              <td class="loss">-11.9%</td>
-              <td>8.8%</td>
-
-            </tr>
-            <tr class="t-row">
-              <td>C</td>
-              <td class="gain">33.4%</td>
-              <td class="loss">-18.0%</td>
-              <td>10.2%</td>
-
-            </tr>
-            <tr>
-              <td>D</td>
-              <td class="gain">42.6%</td>
-              <td class="loss">-23.8%</td>
-              <td>11.5%</td>
-            </tr>
-            <tr class="t-row">
-              <td>E</td>
-              <td class="gain">50.0%</td>
-              <td class="loss">-28.2%</td>
-              <td>12.3%</td>
-            </tr>
-          </table>
-          <!-- Choices for the ninth question -->
-          <label class="contain"><input type="radio" name="q10" value="c1" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Portfolio A </label><br />
-          <label class="contain"><input type="radio" name="q10" value="c2" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Portfolio B </label><br />
-          <label class="contain"><input type="radio" name="q10" value="c3" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Portfolio C </label><br />
-          <label class="contain"><input type="radio" name="q10" value="c4" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Portfolio D </label><br />
-          <label class="contain"><input type="radio" name="q10" value="c5" onclick="setAnswerButton()" />
-            <span class="checkmark"></span> Portfolio E </label><br />
-        </div>
-
-        <div class="question invisible" id="question-11">
-          <button id="calc" type="submit" name="Submit" class="btn btn-dark btn-block" value="Calculate">
-            Calculate
-          </button>
-        </div>
-        <div class="row">
-          <div class="col-sx-6 ">
-            <button type="reset" id="reset" onclick="resetAnswer()">
-              Reset
-            </button>
-          </div>
-          <div class="col-sx-6">
-            <div class="invisible" id="confirm_answer">
-              <a onclick="nextQuestion()"><i class="fas fa-arrow-circle-right"></i></a>
+        <p>
+          Investing is a challenging topic. The key to investing is
+          understanding the principles which should drive your investment
+          decision. Two of the most important principles are knowing yourself
+          and understanding risk. Most firms have Risk Tolerance Questionnaires
+          that are designed to get you invested into their products. Since Armis
+          Financial is a “fee-only” firm that gets paid for advice not by how
+          much or what we sell. Armis Financial has no bias here.
+        </p>
+        <p>
+          This questionnaire was developed to help you understand yourself. This
+          Questionnaire has 10 questions that are divided in two sections:
+          Understanding your Risk Capacity and Understanding your own Tolerance
+          to Risk.
+        </p>
+        <p id="third-p">
+          After we gauge these two elements, we will be able to measure the
+          results and cross-reference what your true Risk Profile is. This will
+          not only help us get a better understanding of your financial goals
+          but what road to take to get there.
+        </p>
+        <div class="container" id="button-container">
+          <div class="row">
+            <div class="col-6">
+              <button
+                class="button_header"
+                id="startQuizBtn"
+                onclick="startQuiz()"
+                type="button"
+                href="#form-con"
+              >
+                Start
+              </button>
+            </div>
+            <div class="col-6">
+              <a href="https://armisfinancial.com" id="homeButton" class="btn">
+                Home</a
+              >
             </div>
           </div>
         </div>
-      </form>
-
-      <!-- Loading -->
-      <div id="loading">
-        <img src="img/giphy.gif" alt="" class="img-fluid" />
       </div>
-    </div>
-    <div class="container-fluid invisible" id="table">
-      <form method="POST" name="Risk-Profile-Questionnaire" netlify>
-        <div class="container">
+    </section>
+    <section id="form-con">
+      <div class="container form-contain">
+        <div id="input-progress"></div>
+
+        <div id="progress-bar"></div>
+
+        <form id="quiz">
+          <div class="question invisible" id="question-1">
+            <h1>Risk Capacity<span> - Time Horizon</span></h1>
+            <!-- Question 1 -->
+            <h2>1. What is your current age?</h2>
+            <!--
+              Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1.
+            -->
+            <!-- The value is which answer the choice corresponds to. -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q1"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> More than 60 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q1"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Between 51 and 60 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q1"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Between 41 and 50 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q1"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Between 31 and 40 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q1"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 30 or Younger </label
+            ><br />
+          </div>
+
+          <div class="question invisible" id="question-2">
+            <h1>Risk Capacity<span> - Time Horizon</span></h1>
+            <!-- Question 2 -->
+            <h2>
+              2. Please estimate when you will need to withdraw 20% of your
+              current portfolio value, such as a need for a house down payment
+              or some other major financial need?
+            </h2>
+            <!--
+              Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question.
+            -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q2"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Within the next year </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q2"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 2 – 5 Years from now </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q2"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 5 – 10 Years from now </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q2"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 10 – 20 Years from now </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q2"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> More than 20 Years from now </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-3">
+            <h1>Risk Capacity<span> - Liquidity</span></h1>
+            <!-- Question 3 -->
+            <h2>
+              3. If you were to lose your job today, how long will you be able
+              to maintain your current spending life style before you run out of
+              money in your Savings and Checking account?
+            </h2>
+            <!-- Choices for the third question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q3"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 1 Week </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q3"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 1 Month </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q3"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 3 Months </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q3"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 6 Months </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q3"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> 1 Year or More </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-4">
+            <h1>Risk Capacity<span> - Income</span></h1>
+            <!-- Question 4 -->
+            <h2>4. What is your total annual income?</h2>
+            <!-- Choices for the fourth question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q4"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Less than $50,000 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q4"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> $50,000 – $100,000 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q4"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> $100,000 – $150,000 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q4"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> $150,000 – $250,000 </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q4"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> More than $250,000 </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-5">
+            <h1>Risk Capacity<span> - Reliability</span></h1>
+            <!-- Question 5 -->
+            <h2>5. Please rate the stability of your income.</h2>
+            <!-- Choices for the fourth question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q5"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Very Low </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q5"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Below Average </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q5"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Average </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q5"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Above Average </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q5"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Very High </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-6">
+            <h1>Risk Tolerance<span> - Behavior</span></h1>
+            <!-- Question 6 -->
+            <h2>
+              6. If you unexpectedly received $20,000 to invest today, what
+              would you do?
+            </h2>
+            <!-- Choices for the fourth question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q6"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Deposit it in a bank account,
+              money market account, or an insured CD. </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q6"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Invest only in safe quality bonds
+              or bond funds. </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q6"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Invest in a proper mix of bonds
+              and stocks </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q6"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Invest only in stocks or stock
+              funds </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q6"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Buy $20,000 worth of lottery
+              tickets. </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-7">
+            <h1>Risk Tolerance<span> - Perception</span></h1>
+            <!-- Question 7 -->
+            <h2>
+              7. When you think of the word “risk” in a financial context, which
+              of the following words come to mind?
+            </h2>
+            <!-- Choices for the fourth question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q7"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Absolute Loss </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q7"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Danger </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q7"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Uncertainty </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q7"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Opportunity </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q7"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Thrill </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-8">
+            <h1>Risk Tolerance<span> - Short-Term</span></h1>
+            <!-- Question 8 -->
+            <h2>
+              8. Which of these statements would best describe your attitudes
+              about the next three years performance of this investment?
+            </h2>
+            <!-- Choices for the fourth question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q8"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> I need to see at least a little
+              return </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q8"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> I’d have a hard time tolerating
+              any losses </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q8"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> I can tolerate a small loss </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q8"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> I can tolerate a loss </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q8"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> I don’t mind a loss </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-9">
+            <h1>Risk Tolerance<span> - Volatility</span></h1>
+            <!-- Question 9 -->
+            <h2>
+              9. Throughout the 17-month bear during the 2008 Mortgage Crisis,
+              the S&P 500 lost 50% of its value. Which of the following would
+              you have done if your portfolio experiences a 50% loss?
+            </h2>
+            <!-- Choices for the ninth question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q9"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Sell all of your remaining
+              investments and remain in cash </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q9"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Move all of your investments into
+              Bonds and CDs </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q9"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Change the allocation of your
+              portfolio to something more conservative </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q9"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Hold on to your investment </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q9"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Invest more </label
+            ><br />
+          </div>
+          <div class="question invisible" id="question-10">
+            <h1>Risk Capacity<span> - Volatility</span></h1>
+            <!-- Question 10 -->
+            <h2>10. How emotionally comfortable are you with volatility?</h2>
+            <p>
+              Which the following portfolios are you more comfortable with given
+              the best-case and worst-case annual return?
+            </p>
+            <small class="form-text text-muted"
+              >The figures are hypothetical and do not represent the performance
+              of any particular investment.</small
+            >
+            <table id="question10">
+              <tr>
+                <th>Plan</th>
+                <th>Best-case</th>
+                <th>Worst-case</th>
+                <th>Average Annual Return</th>
+              </tr>
+              <tr class="t-row">
+                <td>A</td>
+                <td class="gain">16.1%</td>
+                <td class="loss">-5.4%</td>
+                <td>7.0%</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td class="gain">24.8%</td>
+                <td class="loss">-11.9%</td>
+                <td>8.8%</td>
+              </tr>
+              <tr class="t-row">
+                <td>C</td>
+                <td class="gain">33.4%</td>
+                <td class="loss">-18.0%</td>
+                <td>10.2%</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td class="gain">42.6%</td>
+                <td class="loss">-23.8%</td>
+                <td>11.5%</td>
+              </tr>
+              <tr class="t-row">
+                <td>E</td>
+                <td class="gain">50.0%</td>
+                <td class="loss">-28.2%</td>
+                <td>12.3%</td>
+              </tr>
+            </table>
+
+            <!-- Choices for the ninth question -->
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q10"
+                value="c1"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Portfolio A </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q10"
+                value="c2"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Portfolio B </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q10"
+                value="c3"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Portfolio C </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q10"
+                value="c4"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Portfolio D </label
+            ><br />
+            <label class="contain"
+              ><input
+                type="radio"
+                name="q10"
+                value="c5"
+                onclick="setAnswerButton()"
+              />
+              <span class="checkmark"></span> Portfolio E </label
+            ><br />
+          </div>
+
+          <div class="question invisible" id="question-11">
+            <button
+              id="calc"
+              type="submit"
+              name="Submit"
+              class="btn btn-dark btn-block"
+              value="Calculate"
+            >
+              Calculate
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-sx-6 ">
+              <button type="reset" id="reset" onclick="resetAnswer()">
+                Reset
+              </button>
+            </div>
+            <div class="col-sx-6">
+              <div class="invisible" id="confirm_answer">
+                <a onclick="nextQuestion()"
+                  ><i class="fas fa-arrow-circle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- Loading -->
+        <div id="loading">
+          <img src="img/giphy.gif" alt="" class="img-fluid" />
+        </div>
+      </div>
+    </section>
+    <section id="result-form" class="invisible">
+      <div class="container-fluid" id="table">
+        <form method="POST" name="Risk-Profile-Questionnaire" netlify>
+          <div id="answer">
+            <table>
+              <tr>
+                <td name="time horizon" value="coservative" >conservative</td>
+                <td>moderate</td>
+                <td>Agressive</td>
+              </tr>
+            </table>
+          </div>
           <div class="row">
             <div class="col">
               <div id="risk-profile">
                 <h2>Your Risk Profile</h2>
                 <label for=""></label>
-                <input type="radio" checked value="checked" name="risk-profile" />
+                <input
+                  type="radio"
+                  checked
+                  value="checked"
+                  name="risk-profile"
+                />
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="col-md-6" id="first-box">
               <div id="risk-capacity">
                 <h2>Your Risk Capacity</h2>
                 <label for=""></label>
-                <input type="radio" checked name="risk-capacity" value="checked" />
+                <input
+                  type="radio"
+                  checked
+                  name="risk-capacity"
+                  value="checked"
+                />
               </div>
             </div>
 
@@ -361,11 +759,18 @@
               <div id="risk-tolerance">
                 <h2>Your Risk Tolerance</h2>
                 <label for=""></label>
-                <input type="radio" checked name="risk-tolerance" value="checked" />
+                <input
+                  type="radio"
+                  checked
+                  name="risk-tolerance"
+                  value="checked"
+                />
               </div>
             </div>
           </div>
+
           <!-- Table Row -->
+
           <div class="row" id="table-row">
             <div class="col-sm-6" id="third-box">
               <h2 id="riskLevel">Risk Levels</h2>
@@ -390,30 +795,53 @@
             <!-- Contact Form -->
             <div id="risk-contact" class="col-sm-6">
               <div class="form-row">
-
                 <div class="form-group col-md-6">
                   <label for="first-name">First Name:</label>
-                  <input type="text" class="form-control" id="inputFName" placeholder="Last Name" name="first-name"
-                    required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputFName"
+                    placeholder="Last Name"
+                    name="first-name"
+                    required
+                  />
                 </div>
                 <div class="form-group col-md-6">
                   <label for="last-name">Last Name:</label>
-                  <input type="text" class="form-control" id="inputLName" placeholder="Last Name" name="last-name"
-                    required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputLName"
+                    placeholder="Last Name"
+                    name="last-name"
+                    required
+                  />
                 </div>
-
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail">Email:</label>
-                  <input type="email" class="form-control" id="inputAddress" placeholder="johndoe@example.com" name="email"
-                    required />
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="johndoe@example.com"
+                    name="email"
+                    required
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >We'll never share your email with anyone else.</small
+                  >
                 </div>
 
                 <div class="form-group col-md-6">
                   <label for="inputState">User:</label>
-                  <select id="inputUser" class="form-control" required name="User">
+                  <select
+                    id="inputUser"
+                    class="form-control"
+                    required
+                    name="User"
+                  >
                     <option selected>Choose...</option>
                     <option>Client</option>
                     <option>Guest</option>
@@ -422,7 +850,11 @@
               </div>
               <div class="row">
                 <div class="col-6">
-                  <button type="reset" class="btn btn-danger" onclick="resetAnswer()">
+                  <button
+                    type="reset"
+                    class="btn btn-danger"
+                    onclick="resetAnswer()"
+                  >
                     Reset
                   </button>
                 </div>
@@ -433,29 +865,34 @@
             </div>
             <!-- End Contact form -->
           </div>
+
           <!-- End Table Row -->
+        </form>
+      </div>
+    </section>
 
-        </div>
-    </div>
-
-    </form>
-    </div>
-    <div id="answer"></div>
-  </section>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
-  <!-- animation / scroll magic -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/ScrollToPlugin.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+      integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+      crossorigin="anonymous"
+    ></script>
+    <!-- animation / scroll magic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js
 
 
 
@@ -472,8 +909,7 @@
 
 
     "></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-  <script src="app.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>

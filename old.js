@@ -6,8 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var questions = [
-  {
+var questions = [{
     question: '1.	What is your current age?',
     choices: [
       'More than 60',
@@ -19,8 +18,7 @@ var questions = [
     riskValue: [0, 5, 10, 15, 20]
   },
   {
-    question:
-      '2.	Please estimate when you will need to withdraw 20% of your current portfolio value, such as a need for a house down payment or some other major financial need?',
+    question: '2.	Please estimate when you will need to withdraw 20% of your current portfolio value, such as a need for a house down payment or some other major financial need?',
     choices: [
       'Within the next year',
       '2 – 5 Years from now',
@@ -31,8 +29,7 @@ var questions = [
     riskValue: [0, 5, 10, 15, 20]
   },
   {
-    question:
-      '3.	If you were to lose your job today, how long will you be able to maintain your current spending life style before you run out of money in your Savings and Checking account? ',
+    question: '3.	If you were to lose your job today, how long will you be able to maintain your current spending life style before you run out of money in your Savings and Checking account? ',
     choices: ['1 Week', '1 Month', '3 Months', '6 Months', '1 Year or More'],
 
     riskValue: [0, 5, 10, 15, 20]
@@ -67,7 +64,7 @@ var currentQuestion = 0;
 var answers = 0;
 var quizOver = false;
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Display the first question
   displayCurrentQuestion();
   $(this)
@@ -77,7 +74,7 @@ $(document).ready(function() {
   // On clicking next, display the next question
   $(this)
     .find('.nextButton')
-    .on('click', function() {
+    .on('click', function () {
       if (!quizOver) {
         value = $("input[type='radio']:checked").val();
 
@@ -147,10 +144,10 @@ function displayCurrentQuestion() {
     choice = questions[currentQuestion].choices[i];
     $(
       '<li><input type="radio" value=' +
-        i +
-        ' name="dynradio" />' +
-        choice +
-        '</li>'
+      i +
+      ' name="dynradio" />' +
+      choice +
+      '</li>'
     ).appendTo(choiceList);
   }
 }

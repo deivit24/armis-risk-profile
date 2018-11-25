@@ -134,6 +134,15 @@ body {
           body .form-contain .question .contain input:checked ~ .checkmark:after {
             display: block; }
 
+#result-form {
+  transition: all 1s ease-in-out;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  box-shadow: inset 0px 0px 13px 5px rgba(68, 68, 68, 0.2); }
+
 .invisible {
   display: none; }
 
@@ -442,7 +451,6 @@ body {
     display: none; }
   #risk-profile {
     padding: 5px;
-    margin-top: -25px;
     margin-bottom: 15px; }
     #risk-profile h2 {
       font-size: 1.5rem;

@@ -59,6 +59,7 @@ function hideQuestion(id) {
     }
   }
 }
+
 function showQuestion(id) {
   var totalQuestions = getNumberOfQuestions();
   if (id <= totalQuestions) {
@@ -72,7 +73,7 @@ function showQuestion(id) {
 }
 
 // listen for submit
-document.getElementById('quiz').addEventListener('submit', function(e) {
+document.getElementById('quiz').addEventListener('submit', function (e) {
   // hide results
   document.getElementById('answer').style.display = 'none';
   // show loader
@@ -162,10 +163,11 @@ function calculateResults() {
   document.getElementById('loading').style.display = 'none';
 
   document.getElementById('calc').style.display = 'none';
+  document.getElementById('form-con').style.display = 'none';
 
   inputProgress.style.display = 'none';
   progress.style.display = 'none';
-  document.getElementById('table').classList.remove('invisible');
+  document.getElementById('result-form').classList.remove('invisible');
 
   caclRiskProfile();
 }
@@ -186,12 +188,16 @@ var scene = new ScrollMagic.Scene({
 }).addTo(controller);
 
 // change behaviour of controller to animate scroll instead of jump
-controller.scrollTo(function(newpos) {
-  TweenMax.to(window, 0.5, { scrollTo: { y: newpos } });
+controller.scrollTo(function (newpos) {
+  TweenMax.to(window, 0.5, {
+    scrollTo: {
+      y: newpos
+    }
+  });
 });
 
 //  bind scroll to anchor links
-$(document).on('click', "[href^='#']", function(e) {
+$(document).on('click', "[href^='#']", function (e) {
   var id = $(this).attr('href');
   if ($(id).length > 0) {
     e.preventDefault();
@@ -514,3 +520,6 @@ function caclRiskProfile() {
     vaRisk.classList = 'chosen';
   }
 }
+
+
+// side swipe panels
