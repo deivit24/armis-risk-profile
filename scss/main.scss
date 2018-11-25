@@ -168,7 +168,7 @@ body {
           background: white;
         }
 
-        &:hover input~.checkmark {
+        &:hover input ~ .checkmark {
           background-color: #ccc;
         }
 
@@ -179,7 +179,7 @@ body {
           height: 0;
           width: 0;
 
-          &:checked~.checkmark {
+          &:checked ~ .checkmark {
             background-color: #d89e04;
 
             &:after {
@@ -210,8 +210,6 @@ body {
 #answer {
   display: none;
   text-align: center;
-
-
 
   img {
     width: 250px;
@@ -272,7 +270,6 @@ body {
     border-top: darken(#d89e04, 20) solid 1px;
     border-right: darken(#d89e04, 20) solid 1px;
     border-left: darken(#d89e04, 20) solid 1px;
-
   }
 
   .t-row {
@@ -295,8 +292,6 @@ body {
     color: red;
     font-weight: bold;
   }
-
-
 }
 
 #table {
@@ -346,7 +341,8 @@ body {
   }
 }
 
-#riskTable {}
+#riskTable {
+}
 
 // netlify form at the bottom
 
@@ -476,7 +472,8 @@ body {
   justify-content: center;
 }
 
-#second-box {}
+#second-box {
+}
 
 #third-box {
   display: flex;
@@ -501,13 +498,5 @@ body {
 .show {
   display: block;
 }
-
-
-
-
-
-
-
-
 
 @import 'mobile';

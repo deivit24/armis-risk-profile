@@ -14,6 +14,8 @@ function startQuiz() {
   startBtn.parentNode.removeChild(startBtn);
   inputProgress.style.width = 10 + '%';
   setTimeout(deleteSecOne, 1000);
+
+
 }
 
 // delete section 1
@@ -21,6 +23,10 @@ function deleteSecOne() {
   var secOne = document.getElementById('sec1');
   secOne.parentNode.removeChild(secOne);
 }
+
+
+
+
 
 // get the number of questions
 function getNumberOfQuestions() {
@@ -163,13 +169,15 @@ function calculateResults() {
   document.getElementById('loading').style.display = 'none';
 
   document.getElementById('calc').style.display = 'none';
-  document.getElementById('form-con').style.display = 'none';
+
 
   inputProgress.style.display = 'none';
   progress.style.display = 'none';
-  document.getElementById('result-form').classList.remove('invisible');
+  var showTable = document.getElementById('table');
+  showTable.classList.remove("invisible");
 
   caclRiskProfile();
+
 
 }
 

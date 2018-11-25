@@ -203,3 +203,4 @@ function resetAnswer() {
   let answerbox = document.getElementById('answer');
   answerbox.innerHTML = '';
 }
+
