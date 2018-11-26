@@ -14,6 +14,21 @@ function startQuiz() {
   startBtn.parentNode.removeChild(startBtn);
   inputProgress.style.width = 10 + '%';
   setTimeout(deleteSecOne, 1000);
+  var riskContact = document.getElementById('risk-contact');
+
+  riskContact.parentNode.removeChild(riskContact);
+
+
+}
+
+function startQuizGuest() {
+  document.getElementById('question-1').className = 'question';
+  var startBtn = document.getElementById('startQuizBtn');
+  startBtn.parentNode.removeChild(startBtn);
+  inputProgress.style.width = 10 + '%';
+  setTimeout(deleteSecOne, 1000);
+  var ClientRiskContact = document.getElementById('client-risk-contact');
+  ClientRiskContact.parentNode.removeChild(ClientRiskContact);
 
 
 }

@@ -1,53 +1,53 @@
-#sec1 {
+#risk-profile-questions #sec1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #333;
   height: 100vh;
   transition: all 1s ease-in-out; }
-  #sec1 .container {
+  #risk-profile-questions #sec1 .container {
     text-align: center; }
-    #sec1 .container h1 {
+    #risk-profile-questions #sec1 .container h1 {
       font-family: 'Ubuntu';
       color: white;
       font-size: 30px;
       margin-bottom: 25px; }
-    #sec1 .container img {
+    #risk-profile-questions #sec1 .container img {
       width: 500px; }
-    #sec1 .container p {
+    #risk-profile-questions #sec1 .container p {
       text-align: left;
       font-family: 'Raleway';
       color: white;
       font-size: 20px; }
-  #sec1 #startQuizBtn {
+  #risk-profile-questions #sec1 #startQuizBtn {
     background: white;
     width: 100px;
     border: black 2px solid;
     color: black;
     transition: all 0.3s ease-in-out;
     height: 100%; }
-    #sec1 #startQuizBtn:hover {
+    #risk-profile-questions #sec1 #startQuizBtn:hover {
       cursor: pointer;
       border: #d89e04 2px solid;
       font-size: 1.2rem;
       width: 120px; }
-  #sec1 #homeButton {
+  #risk-profile-questions #sec1 #homeButton {
     background: white;
     width: 100px;
     border: black 2px solid;
     color: black;
     transition: all 0.3s ease-in-out; }
-    #sec1 #homeButton:hover {
+    #risk-profile-questions #sec1 #homeButton:hover {
       cursor: pointer;
       border: #d89e04 2px solid;
       font-size: 1.2rem;
       width: 120px; }
-  #sec1 #button-container {
+  #risk-profile-questions #sec1 #button-container {
     display: flex;
     flex-direction: row;
     justify-content: center; }
 
-#form-con {
+#risk-profile-questions #form-con {
   transition: all 1s ease-in-out;
   height: 100vh;
   display: flex;
@@ -56,23 +56,23 @@
   background: white;
   box-shadow: inset 0px 0px 13px 5px rgba(68, 68, 68, 0.2); }
 
-.form-contain {
+#risk-profile-questions .form-contain {
   padding: 25px 20px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   transition: transform 0.1s ease-in-out;
   width: 600px; }
-  .form-contain #input-progress {
+  #risk-profile-questions .form-contain #input-progress {
     border-bottom: 3px solid #d89e04;
     width: 0;
     transition: width 0.6s ease-in-out; }
-  .form-contain #progress-bar {
+  #risk-profile-questions .form-contain #progress-bar {
     background: #fdd878;
     height: 10px;
     width: 100%;
     transition: width 0.5s ease-in-out;
     margin-bottom: 25px; }
-  .form-contain .question h1 {
+  #risk-profile-questions .form-contain .question h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.5rem;
     background: #d89e04;
@@ -81,10 +81,10 @@
     color: black;
     width: 50%;
     border-top-right-radius: 25px; }
-    .form-contain .question h1 span {
+    #risk-profile-questions .form-contain .question h1 span {
       color: #333;
       font-size: 1rem; }
-  .form-contain .question h2 {
+  #risk-profile-questions .form-contain .question h2 {
     font-size: 1.2rem;
     font-family: 'Raleway';
     margin-bottom: 15px;
@@ -92,7 +92,7 @@
     color: white;
     padding: 15px 10px;
     width: 100%; }
-  .form-contain .question .contain {
+  #risk-profile-questions .form-contain .question .contain {
     position: relative;
     padding-left: 35px;
     cursor: pointer;
@@ -100,7 +100,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-    .form-contain .question .contain .checkmark {
+    #risk-profile-questions .form-contain .question .contain .checkmark {
       top: 0;
       left: 0;
       height: 20px;
@@ -108,11 +108,11 @@
       background-color: #eee;
       border-radius: 50%;
       position: absolute; }
-      .form-contain .question .contain .checkmark:after {
+      #risk-profile-questions .form-contain .question .contain .checkmark:after {
         content: '';
         position: absolute;
         display: none; }
-    .form-contain .question .contain .checkmark:after {
+    #risk-profile-questions .form-contain .question .contain .checkmark:after {
       transition: all 0.5s ease-in-out;
       top: 6px;
       left: 6px;
@@ -120,20 +120,20 @@
       height: 8px;
       border-radius: 50%;
       background: white; }
-    .form-contain .question .contain:hover input ~ .checkmark {
+    #risk-profile-questions .form-contain .question .contain:hover input ~ .checkmark {
       background-color: #ccc; }
-    .form-contain .question .contain input {
+    #risk-profile-questions .form-contain .question .contain input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
       height: 0;
       width: 0; }
-      .form-contain .question .contain input:checked ~ .checkmark {
+      #risk-profile-questions .form-contain .question .contain input:checked ~ .checkmark {
         background-color: #d89e04; }
-        .form-contain .question .contain input:checked ~ .checkmark:after {
+        #risk-profile-questions .form-contain .question .contain input:checked ~ .checkmark:after {
           display: block; }
 
-#result-form {
+#risk-profile-questions #result-form {
   transition: all 1s ease-in-out;
   height: 100vh;
   display: flex;
@@ -142,167 +142,169 @@
   background: white;
   box-shadow: inset 0px 0px 13px 5px rgba(68, 68, 68, 0.2); }
 
-.invisible {
+#risk-profile-questions .invisible {
   display: none; }
 
-#loading,
-#answer {
+#risk-profile-questions #loading,
+#risk-profile-questions #answer {
   display: none;
   text-align: center; }
-  #loading img,
-  #answer img {
+  #risk-profile-questions #loading img,
+  #risk-profile-questions #answer img {
     width: 250px;
     text-align: center; }
 
-.redd {
+#risk-profile-questions .redd {
   color: red; }
 
-#quiz .row {
+#risk-profile-questions #quiz .row {
   margin-top: 25px; }
 
-#quiz #reset {
+#risk-profile-questions #quiz #reset {
   margin-left: 20px;
   background: white;
   border: 1px solid black;
   font-family: 'Raleway'; }
-  #quiz #reset:hover {
+  #risk-profile-questions #quiz #reset:hover {
     background: #a67903;
     color: white;
     border: 1px solid black;
     cursor: pointer; }
 
-#quiz #confirm_answer {
+#risk-profile-questions #quiz #confirm_answer {
   margin-left: 450px; }
-  #quiz #confirm_answer a {
+  #risk-profile-questions #quiz #confirm_answer a {
     font-size: 2rem;
     color: #d89e04; }
-    #quiz #confirm_answer a:hover {
+    #risk-profile-questions #quiz #confirm_answer a:hover {
       cursor: pointer;
       color: #a67903; }
 
-#question10 {
+#risk-profile-questions #question10 {
   text-align: center;
   width: 100%;
   margin-bottom: 25px;
   margin-top: 5px;
   border-bottom: 1px solid black; }
-  #question10 th {
+  #risk-profile-questions #question10 th {
     padding: 5px;
     border-bottom: #745502 solid 1px;
     border-top: #745502 solid 1px;
     border-right: #745502 solid 1px;
     border-left: #745502 solid 1px; }
-  #question10 .t-row {
+  #risk-profile-questions #question10 .t-row {
     background: #fde7ab; }
-  #question10 td {
+  #risk-profile-questions #question10 td {
     border-right: 1px solid black;
     border-left: 1px solid black;
     font-weight: bold;
     padding: 5px; }
-  #question10 .gain {
+  #risk-profile-questions #question10 .gain {
     color: green;
     font-weight: bold; }
-  #question10 .loss {
+  #risk-profile-questions #question10 .loss {
     color: red;
     font-weight: bold; }
 
-#table {
+#risk-profile-questions #table {
   text-align: center;
   margin-top: -100px; }
-  #table h2 {
+  #risk-profile-questions #table h2 {
     font-family: 'Raleway'; }
-  #table tr th {
+  #risk-profile-questions #table tr th {
     padding: 10px 10px;
     text-align: center;
     padding: 10px 10px;
     border: 1px solid black;
     width: 500px;
     font-family: 'Ubuntu'; }
-  #table tr #vc {
+  #risk-profile-questions #table tr #vc {
     background: #fde7ab; }
-  #table tr #c {
-    background: #fde092; }
-  #table tr #m {
+  #risk-profile-questions #table tr #c {
     background: #fdd878; }
-  #table tr #ma {
-    background: #fcd15f; }
-  #table tr #va {
+  #risk-profile-questions #table tr #m {
     background: #fcca46; }
-  #table tr .chosen {
-    border: 2px solid #d89e04;
+  #risk-profile-questions #table tr #ma {
+    background: #fbbc14; }
+  #risk-profile-questions #table tr #va {
+    background: #d89e04; }
+  #risk-profile-questions #table tr .chosen {
+    border: 3px solid black;
     font-weight: bold;
-    font-size: 1.2rem; }
+    font-size: 1.5rem; }
 
-#risk-capacity,
-#risk-tolerance {
+#risk-profile-questions #risk-capacity,
+#risk-profile-questions #risk-tolerance {
   padding: 10px;
   margin-top: 25px;
   color: black; }
-  #risk-capacity h2,
-  #risk-tolerance h2 {
+  #risk-profile-questions #risk-capacity h2,
+  #risk-profile-questions #risk-tolerance h2 {
     text-align: center;
     font-size: 1.5rem; }
-  #risk-capacity input,
-  #risk-tolerance input {
+  #risk-profile-questions #risk-capacity input,
+  #risk-profile-questions #risk-tolerance input {
     width: 0;
     height: 0; }
-  #risk-capacity label,
-  #risk-tolerance label {
+  #risk-profile-questions #risk-capacity label,
+  #risk-profile-questions #risk-tolerance label {
     color: black;
     font-family: 'Ubuntu';
     padding: 10px;
     border: 1px solid black;
     width: 200px;
     margin: 0%; }
-  #risk-capacity .vc,
-  #risk-tolerance .vc {
+  #risk-profile-questions #risk-capacity .vc,
+  #risk-profile-questions #risk-tolerance .vc {
     background: #fde7ab; }
-  #risk-capacity .c,
-  #risk-tolerance .c {
-    background: #fde092; }
-  #risk-capacity .m,
-  #risk-tolerance .m {
+  #risk-profile-questions #risk-capacity .c,
+  #risk-profile-questions #risk-tolerance .c {
     background: #fdd878; }
-  #risk-capacity .ma,
-  #risk-tolerance .ma {
-    background: #fcd15f; }
-  #risk-capacity .a,
-  #risk-tolerance .a {
+  #risk-profile-questions #risk-capacity .m,
+  #risk-profile-questions #risk-tolerance .m {
     background: #fcca46; }
+  #risk-profile-questions #risk-capacity .ma,
+  #risk-profile-questions #risk-tolerance .ma {
+    background: #fbbc14; }
+  #risk-profile-questions #risk-capacity .a,
+  #risk-profile-questions #risk-tolerance .a {
+    background: #d89e04; }
 
-#risk-profile {
+#risk-profile-questions #risk-profile {
   padding: 10px;
   margin-top: 25px;
   color: black; }
-  #risk-profile h2 {
+  #risk-profile-questions #risk-profile h2 {
     text-align: center; }
-  #risk-profile input {
+  #risk-profile-questions #risk-profile input {
     width: 0px;
     height: 0px; }
-  #risk-profile label {
+  #risk-profile-questions #risk-profile label {
     color: black;
     font-family: 'Ubuntu';
     font-size: 1.5rem;
     padding: 10px;
     border: 2px solid black;
-    width: 250px;
+    width: 100%;
     margin: 0%; }
-  #risk-profile .vc {
+  #risk-profile-questions #risk-profile .vc {
     background: #fde7ab; }
-  #risk-profile .c {
-    background: #fde092; }
-  #risk-profile .m {
+  #risk-profile-questions #risk-profile .c {
     background: #fdd878; }
-  #risk-profile .ma {
-    background: #fcd15f; }
-  #risk-profile .a {
+  #risk-profile-questions #risk-profile .m {
     background: #fcca46; }
+  #risk-profile-questions #risk-profile .ma {
+    background: #fbbc14; }
+  #risk-profile-questions #risk-profile .a {
+    background: #d89e04; }
 
-#risk-contact {
+#risk-profile-questions #risk-contact,
+#risk-profile-questions #client-risk-contact {
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  #risk-contact label {
+  #risk-profile-questions #risk-contact label,
+  #risk-profile-questions #client-risk-contact label {
     background: black;
     color: white;
     padding: 10px;
@@ -312,23 +314,25 @@
     margin-bottom: 0px;
     font-family: 'Raleway';
     font-size: 1rem; }
-  #risk-contact input {
+  #risk-profile-questions #risk-contact input,
+  #risk-profile-questions #client-risk-contact input {
     background: #fde7ab;
     color: black; }
-  #risk-contact select {
+  #risk-profile-questions #risk-contact select,
+  #risk-profile-questions #client-risk-contact select {
     background: #fde7ab;
     color: black; }
 
-#first-box {
+#risk-profile-questions #first-box {
   display: flex;
   flex-direction: column;
   justify-content: center; }
 
-#third-box {
+#risk-profile-questions #third-box {
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  #third-box h2 {
+  #risk-profile-questions #third-box h2 {
     font-size: 1.5rem;
     color: white;
     background: black;
@@ -337,10 +341,10 @@
     border-top-right-radius: 25px;
     border-top-left-radius: 25px; }
 
-#table-row {
+#risk-profile-questions #table-row {
   margin-top: 25px; }
 
-.show {
+#risk-profile-questions .show {
   display: block; }
 
 @media screen and (max-width: 768px) {
@@ -349,32 +353,32 @@
     display: none; } }
 
 @media screen and (max-width: 500px) {
-  body #sec1 .container img {
+  #risk-profile-questions #sec1 .container img {
     width: 250px; }
-  body #sec1 .container h1 {
+  #risk-profile-questions #sec1 .container h1 {
     font-size: 18px; }
-  body #sec1 .container p {
+  #risk-profile-questions #sec1 .container p {
     font-size: 15px; }
-  body #third-p {
+  #risk-profile-questions #third-p {
     display: none; }
-  body .form-contain {
+  #risk-profile-questions .form-contain {
     padding: 25px 20px;
     margin-top: 50px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     transition: transform 0.1s ease-in-out;
     width: 350px; }
-    body .form-contain #input-progress {
+    #risk-profile-questions .form-contain #input-progress {
       border-bottom: 3px solid #d89e04;
       width: 0;
       transition: width 0.6s ease-in-out; }
-    body .form-contain #progress-bar {
+    #risk-profile-questions .form-contain #progress-bar {
       background: #fdd878;
       height: 10px;
       width: 100%;
       transition: width 0.5s ease-in-out;
       margin-bottom: 25px; }
-    body .form-contain .question h1 {
+    #risk-profile-questions .form-contain .question h1 {
       font-family: 'Ubuntu', sans-serif;
       font-size: 1.3rem;
       background: #d89e04;
@@ -383,10 +387,10 @@
       color: black;
       width: 100%;
       border-top-right-radius: 25px; }
-      body .form-contain .question h1 span {
+      #risk-profile-questions .form-contain .question h1 span {
         color: #333;
         font-size: 1rem; }
-    body .form-contain .question h2 {
+    #risk-profile-questions .form-contain .question h2 {
       font-size: 1rem;
       font-family: 'Raleway';
       margin-bottom: 15px;
@@ -394,7 +398,7 @@
       color: white;
       padding: 15px 10px;
       width: 100%; }
-    body .form-contain .question .contain {
+    #risk-profile-questions .form-contain .question .contain {
       position: relative;
       padding-left: 35px;
       cursor: pointer;
@@ -402,7 +406,7 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none; }
-      body .form-contain .question .contain .checkmark {
+      #risk-profile-questions .form-contain .question .contain .checkmark {
         top: 0;
         left: 0;
         height: 20px;
@@ -410,11 +414,11 @@
         background-color: #eee;
         border-radius: 50%;
         position: absolute; }
-        body .form-contain .question .contain .checkmark:after {
+        #risk-profile-questions .form-contain .question .contain .checkmark:after {
           content: '';
           position: absolute;
           display: none; }
-      body .form-contain .question .contain .checkmark:after {
+      #risk-profile-questions .form-contain .question .contain .checkmark:after {
         transition: all 0.5s ease-in-out;
         top: 6px;
         left: 6px;
@@ -422,51 +426,53 @@
         height: 8px;
         border-radius: 50%;
         background: white; }
-      body .form-contain .question .contain:hover input ~ .checkmark {
+      #risk-profile-questions .form-contain .question .contain:hover input ~ .checkmark {
         background-color: #ccc; }
-      body .form-contain .question .contain input {
+      #risk-profile-questions .form-contain .question .contain input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
         height: 0;
         width: 0; }
-        body .form-contain .question .contain input:checked ~ .checkmark {
+        #risk-profile-questions .form-contain .question .contain input:checked ~ .checkmark {
           background-color: #d89e04; }
-          body .form-contain .question .contain input:checked ~ .checkmark:after {
+          #risk-profile-questions .form-contain .question .contain input:checked ~ .checkmark:after {
             display: block; }
-  #quiz #confirm_answer {
+  #risk-profile-questions #quiz #confirm_answer {
     margin-left: 150px; }
-    #quiz #confirm_answer a {
+    #risk-profile-questions #quiz #confirm_answer a {
       font-size: 2rem;
       color: #d89e04; }
-      #quiz #confirm_answer a:hover {
+      #risk-profile-questions #quiz #confirm_answer a:hover {
         cursor: pointer;
         color: #a67903; }
-  #riskTable,
-  #riskLevel {
+  #risk-profile-questions #riskTable,
+  #risk-profile-questions #riskLevel {
     display: none; }
-  #risk-capacity,
-  #risk-tolerance {
+  #risk-profile-questions #risk-capacity,
+  #risk-profile-questions #risk-tolerance {
     display: none; }
-  #risk-profile {
+  #risk-profile-questions #risk-profile {
     padding: 5px;
     margin-bottom: 15px; }
-    #risk-profile h2 {
+    #risk-profile-questions #risk-profile h2 {
       font-size: 1.5rem;
       font-weight: bold; }
-  #risk-contact {
+  #risk-profile-questions #risk-contact,
+  #risk-profile-questions #client-risk-contact {
     padding: 5px 5px 20px 5px;
     text-align: left; }
-    #risk-contact label {
+    #risk-profile-questions #risk-contact label,
+    #risk-profile-questions #client-risk-contact label {
       padding: 5px;
       margin-bottom: 0px;
       font-size: 1rem;
-      width: 50%;
+      width: 75%;
       border-top-left-radius: 0px; }
-  #question10 tr {
+  #risk-profile-questions #question10 tr {
     padding: 0px;
     font-size: .8rem; }
-  #question10 th {
+  #risk-profile-questions #question10 th {
     padding: 1px; }
-  #question10 td {
+  #risk-profile-questions #question10 td {
     padding: 0px; } }
