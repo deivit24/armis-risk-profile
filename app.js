@@ -15,9 +15,9 @@ function startQuiz() {
   inputProgress.style.width = 10 + '%';
   setTimeout(deleteSecOne, 1000);
   var riskContact = document.getElementById('risk-contact');
-
   riskContact.parentNode.removeChild(riskContact);
-
+  var phone = document.getElementById('inputPhone');
+  phone.parentNode.removeChild(phone);
 
 }
 
@@ -29,6 +29,8 @@ function startQuizGuest() {
   setTimeout(deleteSecOne, 1000);
   var ClientRiskContact = document.getElementById('client-risk-contact');
   ClientRiskContact.parentNode.removeChild(ClientRiskContact);
+  var account = document.getElementById("inputAccountType");
+  account.parentNode.removeChild(account);
 
 
 }
